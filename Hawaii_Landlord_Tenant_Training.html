@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hawaii Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --navy-mid: #2e3d7a; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4; --text: #1a1a18; --text-muted: #5a5a56;
+    --border: rgba(0,0,0,0.1); --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-track { height: 5px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--navy); border-radius: 3px; transition: width 0.4s ease; }
+  .section-eyebrow { font-size: 11px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+  .section-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; line-height: 1.25; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; margin-bottom: 0.85rem; }
+  .card.blue { border-left: 4px solid var(--blue); }
+  .card.teal { border-left: 4px solid var(--teal); }
+  .card.amber { border-left: 4px solid var(--amber); }
+  .card.red { border-left: 4px solid var(--red); }
+  .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+  .card.blue .card-label { color: var(--blue); } .card.teal .card-label { color: var(--teal); } .card.amber .card-label { color: var(--amber); } .card.red .card-label { color: var(--red); }
+  .card p { font-size: 15px; color: var(--text-muted); }
+  .card ul { margin-top: 4px; padding-left: 1.1rem; }
+  .card ul li { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 22px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); } .btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); } .btn.primary:hover { background: var(--navy-mid); }
+  .step-indicator { font-size: 13px; color: var(--text-muted); }
+  .quiz-q-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1rem; }
+  .q-number { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .q-text { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 1rem; line-height: 1.4; }
+  .quiz-opt { display: block; width: 100%; text-align: left; background: var(--gray-100); border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 7px; font-size: 14px; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .quiz-opt:hover { border-color: var(--navy); background: var(--blue-light); color: var(--blue-dark); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+  .quiz-opt:disabled { cursor: default; }
+  .feedback { font-size: 13.5px; padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 8px; line-height: 1.5; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border: 1px solid var(--red); }
+  .results-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; }
+  .score-ring-wrap { width: 110px; height: 110px; margin: 0 auto 1.25rem; position: relative; }
+  .score-ring-wrap svg { transform: rotate(-90deg); display: block; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .result-tally { display: inline-block; background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 20px; font-size: 14px; color: var(--text-muted); padding: 6px 18px; margin-bottom: 1.5rem; }
+  .result-tally strong { color: var(--navy); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 2rem; }
+  .topic-badge { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); } .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); } .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); } .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.5rem 0; }
+  .result-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .completion-banner { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .completion-banner .star { font-size: 28px; } .completion-banner p { font-size: 14px; opacity: 0.85; margin-top: 2px; } .completion-banner strong { font-size: 16px; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Hawaii Landlord-Tenant Law</h1>
+      <p>Staff Training &amp; Competency Check</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta"><span class="progress-label">Your progress</span><span class="progress-count" id="prog-count">Step 1 of 6</span></div>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:16.6%"></div></div>
+  </div>
+  <div id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type:'learn', label:'Section 1 of 5', title:'Lease Agreements in Hawaii',
+    cards:[
+      {accent:'blue', key:'Written vs. verbal', text:'In Hawaii, lease agreements may be verbal or written. However, a written rental contract is required for any lease lasting one year or more. A written agreement is always recommended to protect both parties.'},
+      {accent:'teal', key:'Recommended lease content', text:'A written lease should clearly identify the parties, the property, rent obligations, and lease term, and include all disclosures required by Hawaii law. Any terms that waive tenants\' rights are prohibited (HI Rev Stat § 521-33).'},
+      {accent:'amber', key:'Habitability standards', text:'Rental properties in Hawaii must meet all applicable safety and health standards. Occupancy limits depend on applicable housing codes, unit size, and fair housing requirements — there is no universal occupancy formula under Hawaii law.'},
+      {accent:'red', key:'Key tenant obligation', text:'Tenants in Hawaii are responsible for maintaining the unit aside from normal wear and tear, refraining from disturbing neighbors, allowing access when necessary, and abiding by lease terms.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 2 of 5', title:'Tenant Screening in Hawaii',
+    cards:[
+      {accent:'blue', key:'Application fee limits', text:'Hawaii law limits rental application fees to the actual cost of screening (HI Rev Stat § 521-46). Landlords must return any unused fees within 30 days. Because fee regulations can change, staff should verify current requirements when questions arise rather than relying on specific figures.'},
+      {accent:'teal', key:'Credit and criminal checks', text:'Landlords may review criminal and credit history during screening. These considerations must be applied equally to all applicants, and landlords must comply with federal regulations including the Fair Credit Reporting Act.'},
+      {accent:'amber', key:'Fair housing in Hawaii', text:'Hawaii fair housing laws prohibit discrimination in tenant selection. Landlords must apply consistent screening criteria across all applicants regardless of protected class status.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 3 of 5', title:'Security Deposits in Hawaii',
+    cards:[
+      {accent:'blue', key:'Deposit cap', text:'Hawaii limits security deposits to one month\'s rent (HI Rev Stat § 521-44). If a tenant has a pet, landlords may collect an additional month\'s rent as a pet deposit.'},
+      {accent:'teal', key:'Move-in condition', text:'The lease must describe the property\'s condition at the time of move-in (HI Rev Code § 521-43). This documentation is essential for resolving disputes over deductions later.'},
+      {accent:'amber', key:'Returning the deposit', text:'Landlords must return the security deposit within 14 days of move-out. If deductions are made, they must notify the tenant in writing of the amount and reason for each deduction (HI Rev Stat § 521-44).'},
+      {accent:'red', key:'Allowable deductions only', text:'Landlords may only use deposits to cover damages beyond normal wear and tear and unpaid rent. Normal wear and tear is never a valid deduction. Unlike some states, Hawaii landlords are not required to pay tenants interest on deposits.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 4 of 5', title:'Landlord Obligations in Hawaii',
+    cards:[
+      {accent:'blue', key:'Habitability duty', text:'Landlords must maintain rental units in safe and habitable condition at all times. This includes meeting all applicable safety and health codes and making timely repairs.'},
+      {accent:'teal', key:'Entry notice required', text:'For non-emergency entry, Hawaii landlords generally must provide at least two days\' advance notice and enter only at reasonable times. Emergency entry is an exception but should be documented after the fact.'},
+      {accent:'amber', key:'Fair housing compliance', text:'All landlords and their staff — including leasing agents and maintenance workers — must follow Hawaii and federal fair housing laws when screening and selecting tenants.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 5 of 5', title:'Eviction in Hawaii',
+    cards:[
+      {accent:'blue', key:'Valid grounds for eviction', text:'Hawaii landlords may evict tenants for violating lease terms, failing to pay rent, or conducting illegal activity on the premises. To remove a tenant without cause, landlords must give appropriate notice and wait until the lease ends.'},
+      {accent:'teal', key:'Documentation best practice', text:'Landlords should carefully document lease violations, notices, communications, and other relevant facts before filing an eviction action. While not every step is a strict legal prerequisite, thorough documentation significantly strengthens the landlord\'s case in court.'},
+      {accent:'amber', key:'Eviction process steps', list:['Serve the appropriate written notice — the required notice period and type depends on the reason for eviction (nonpayment, lease violation, month-to-month termination, illegal conduct, etc.) and may vary under Hawaii law','File an eviction lawsuit in Hawaii District Court (HI Rev Stat § 666-6)','The court serves the tenant with a summons (HI Rev Stat § 666-8)','A hearing is scheduled and the judge issues a ruling']},
+      {accent:'red', key:'No self-help eviction', text:'Hawaii landlords may not resort to self-help eviction tactics such as changing locks, removing belongings, or shutting off utilities. All evictions must go through the Hawaii court system.'}
+    ]
+  },
+  {
+    type:'quiz',
+    questions:[
+      {q:'In Hawaii, when is a written lease agreement legally required?', opts:['Always — all leases must be written','Never — verbal leases are always acceptable','For leases lasting one year or more','Only if rent exceeds $2,000/month'], correct:2, feedbackRight:'Correct! Hawaii requires written leases for any rental agreement lasting one year or more.', feedbackWrong:'Not quite. Hawaii requires a written lease for any rental lasting one year or more, though verbal leases are valid for shorter terms.'},
+      {q:'What is the maximum security deposit a Hawaii landlord can charge (without a pet)?', opts:['1.5 times one month\'s rent','One month\'s rent','Two months\' rent','No legal limit'], correct:1, feedbackRight:'Correct! Hawaii caps security deposits at one month\'s rent. An additional month may be charged if a tenant has a pet.', feedbackWrong:'Not quite. Hawaii limits security deposits to one month\'s rent, with an additional month allowed for pet owners.'},
+      {q:'How many days does a Hawaii landlord have to return a security deposit after move-out?', opts:['7 days','14 days','30 days','45 days'], correct:1, feedbackRight:'Correct! Hawaii requires the security deposit to be returned within 14 days of move-out.', feedbackWrong:'Not quite. Hawaii landlords must return the deposit within 14 days of the tenant moving out.'},
+      {q:'If a Hawaii landlord makes deductions from a security deposit, what must they do?', opts:['Nothing — deductions are at the landlord\'s discretion','Notify the tenant verbally within 30 days','Notify the tenant in writing of the amount and reason for each deduction','File the deductions with the state housing authority'], correct:2, feedbackRight:'Correct! Any deductions must be communicated to the tenant in writing with the amount and reason for each one.', feedbackWrong:'Not quite. Hawaii law requires landlords to notify tenants in writing of the amount and reason for any security deposit deductions.'},
+      {q:'What should a Hawaii landlord do before filing an eviction action?', opts:['File the eviction lawsuit first, then gather documentation','Carefully document lease violations, notices, and relevant communications to support the eviction case in court','Contact the Hawaii Housing Authority for approval','Pay relocation assistance to the tenant'], correct:1, feedbackRight:'Correct. Careful documentation of lease violations, notices, and communications is a strong best practice before filing an eviction action in Hawaii. While not every step is a strict legal prerequisite, thorough records significantly strengthen the landlord\'s case.', feedbackWrong:'Not quite. Landlords should carefully document lease violations, notices, and communications before filing. While not every step is a legal requirement, this documentation is important to support the case in court.'},
+      {q:'What does Hawaii law generally require regarding rental application fees?', opts:['Application fees are prohibited entirely in Hawaii','Fees may be any amount the landlord chooses','Fees should be limited to actual screening costs, and unused fees must be returned','Fees must be approved by the state housing authority'], correct:2, feedbackRight:'Correct. Hawaii law limits application fees to actual screening costs and requires unused fees to be returned. Because fee regulations can change, staff should verify current requirements against the statute when specific questions arise.', feedbackWrong:'Not quite. Hawaii law limits application fees to actual screening costs and requires unused amounts to be returned. Staff should verify current statutory requirements rather than relying on fixed figures.'},
+      {q:'Which best describes the eviction notice requirements in Hawaii?', opts:['All Hawaii evictions begin with a 10-day notice to vacate regardless of the reason','A verbal notice is sufficient for any type of eviction','The required notice type and period varies depending on the reason for eviction — nonpayment, lease violation, termination, and other grounds each have different requirements','Hawaii requires a 30-day notice for all evictions'], correct:2, feedbackRight:'Correct. Hawaii uses different notice types and periods depending on the reason for eviction — nonpayment, lease violations, illegal conduct, month-to-month termination, and holdover tenancy each have different requirements under Hawaii law.', feedbackWrong:'Not quite. Hawaii does not use a single notice period for all evictions. The required notice type and timeframe depends on the specific reason — nonpayment, lease violation, illegal conduct, and termination of a month-to-month tenancy each have different rules.'}
+    ]
+  }
+];
+let current=0,answers=[],answered=[],score=0;
+function setProgress(idx){const t=slides.length,p=Math.round(((idx+1)/t)*100);document.getElementById('prog-fill').style.width=p+'%';document.getElementById('prog-count').textContent='Step '+(idx+1)+' of '+t;}
+function renderLearn(s,idx){const c=s.cards.map(c=>{const b=c.list?`<ul>${c.list.map(i=>`<li>${i}</li>`).join('')}</ul>`:`<p>${c.text}</p>`;return`<div class="card ${c.accent}"><div class="card-label">${c.key}</div>${b}</div>`;}).join('');const ib=idx===slides.length-2;return`<div class="section-eyebrow">${s.label}</div><div class="section-title">${s.title}</div>${c}<div class="nav-row"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><span class="step-indicator">${idx+1} / ${slides.length}</span><button class="btn primary" onclick="go(${idx+1})">${ib?'Take the Quiz →':'Next →'}</button></div>`;}
+function renderQuiz(s,idx){const qc=s.questions.length,dc=answered.filter(a=>a!==undefined).length,ad=dc===qc;let h=`<div class="section-eyebrow">Section 6 of 6</div><div class="section-title">Knowledge Check</div>`;s.questions.forEach((q,qi)=>{const ia=answered[qi]!==undefined,sel=answers[qi];const oh=q.opts.map((o,oi)=>{let c='quiz-opt';if(ia&&oi===q.correct)c+=' correct';else if(ia&&oi===sel&&oi!==q.correct)c+=' wrong';return`<button class="${c}" onclick="answer(${qi},${oi})" ${ia?'disabled':''}>${o}</button>`;}).join('');const fh=ia?`<div class="feedback ${sel===q.correct?'correct':'wrong'}">${sel===q.correct?'✓ '+q.feedbackRight:'✗ '+q.feedbackWrong}</div>`:'';h+=`<div class="quiz-q-card"><div class="q-number">Question ${qi+1} of ${qc}</div><div class="q-text">${q.q}</div>${oh}${fh}</div>`;});h+=`<div class="nav-row"><button class="btn" onclick="go(${idx-1})">← Back to review</button><span class="step-indicator">${dc} of ${qc} answered</span><button class="btn primary" onclick="showResults()" ${ad?'':'disabled'}>See my results →</button></div>`;return h;}
+function renderResults(){const t=slides[slides.length-1].questions.length,p=Math.round((score/t)*100),c=2*Math.PI*48,d=(p/100)*c,rc=p>=80?'#0F6E56':p>=60?'#BA7517':'#A32D2D',hl=p>=80?'Well done!':p>=60?'Good effort!':'Keep studying!',sub=p>=80?'You have a solid grasp of Hawaii landlord-tenant law.':p>=60?'Review the sections where you missed questions, then retake the quiz.':'Go back through the training slides before retaking the quiz.';document.getElementById('prog-fill').style.width='100%';document.getElementById('prog-count').textContent='Complete';return`<div class="results-wrap">${p===100?'<div class="completion-banner"><span class="star">⭐</span><div><strong>Perfect score!</strong><p>You answered every question correctly.</p></div></div>':''}<div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${rc}" stroke-width="9" stroke-dasharray="${d.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round"/></svg><div class="score-num">${p}%</div></div><div class="result-headline">${hl}</div><div class="result-sub">${sub}</div><div class="result-tally">You got <strong>${score} of ${t}</strong> questions correct</div><div class="divider"></div><div class="topics-row"><span class="topic-badge a">Lease Agreements</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Eviction Process</span><span class="topic-badge d">Tenant Screening</span></div><div class="result-nav"><button class="btn" onclick="restartFull()">← Restart full training</button><button class="btn primary" onclick="retakeQuiz()">Retake quiz</button></div></div>`;}
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){setProgress(current);const s=slides[current];document.getElementById('content').innerHTML=s.type==='learn'?renderLearn(s,current):renderQuiz(s,current);window.scrollTo({top:0,behavior:'smooth'});}
+render();
+</script>
+</body>
+</html>
