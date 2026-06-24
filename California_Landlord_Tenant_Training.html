@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>California Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --navy-mid: #2e3d7a; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4; --text: #1a1a18; --text-muted: #5a5a56;
+    --border: rgba(0,0,0,0.1); --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-track { height: 5px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--navy); border-radius: 3px; transition: width 0.4s ease; }
+  .section-eyebrow { font-size: 11px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+  .section-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; line-height: 1.25; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; margin-bottom: 0.85rem; }
+  .card.blue { border-left: 4px solid var(--blue); } .card.teal { border-left: 4px solid var(--teal); } .card.amber { border-left: 4px solid var(--amber); } .card.red { border-left: 4px solid var(--red); }
+  .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+  .card.blue .card-label { color: var(--blue); } .card.teal .card-label { color: var(--teal); } .card.amber .card-label { color: var(--amber); } .card.red .card-label { color: var(--red); }
+  .card p { font-size: 15px; color: var(--text-muted); }
+  .card ul { margin-top: 4px; padding-left: 1.1rem; }
+  .card ul li { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 22px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); } .btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); } .btn.primary:hover { background: var(--navy-mid); }
+  .step-indicator { font-size: 13px; color: var(--text-muted); }
+  .quiz-q-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1rem; }
+  .q-number { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .q-text { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 1rem; line-height: 1.4; }
+  .quiz-opt { display: block; width: 100%; text-align: left; background: var(--gray-100); border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 7px; font-size: 14px; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .quiz-opt:hover { border-color: var(--navy); background: var(--blue-light); color: var(--blue-dark); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+  .quiz-opt:disabled { cursor: default; }
+  .feedback { font-size: 13.5px; padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 8px; line-height: 1.5; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border: 1px solid var(--red); }
+  .results-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; }
+  .score-ring-wrap { width: 110px; height: 110px; margin: 0 auto 1.25rem; position: relative; }
+  .score-ring-wrap svg { transform: rotate(-90deg); display: block; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .result-tally { display: inline-block; background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 20px; font-size: 14px; color: var(--text-muted); padding: 6px 18px; margin-bottom: 1.5rem; }
+  .result-tally strong { color: var(--navy); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 2rem; }
+  .topic-badge { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); } .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); } .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); } .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.5rem 0; }
+  .result-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .completion-banner { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .completion-banner .star { font-size: 28px; } .completion-banner p { font-size: 14px; opacity: 0.85; margin-top: 2px; } .completion-banner strong { font-size: 16px; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>California Landlord-Tenant Law</h1>
+      <p>Staff Training &amp; Competency Check</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta"><span class="progress-label">Your progress</span><span class="progress-count" id="prog-count">Step 1 of 6</span></div>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:16.6%"></div></div>
+  </div>
+  <div id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type:'learn', label:'Section 1 of 5', title:'Landlord & Tenant Rights in California',
+    cards:[
+      {accent:'blue', key:'California landlords have the right to', list:['Collect rent as specified in the lease (amount, due date, accepted payment methods)','Collect a security deposit (limits apply — see Section 3)','Enter the property with 24-hour notice for maintenance and inspections','Evict for non-payment of rent or lease violations','Terminate the lease for valid reasons such as illegal activity']},
+      {accent:'teal', key:'California landlords are responsible for', list:['Maintaining habitable conditions: working plumbing, wiring, heating, and water','Complying with health and safety codes','Making timely repairs after tenant notification','Following all fair housing laws during tenant screening']},
+      {accent:'amber', key:'Strong tenant protections', text:'California tenant rights are among the most comprehensive in the nation. The laws protect tenants from unfair actions while also protecting landlords\' investments. U.S.VETS staff should understand both sides to advocate effectively for veterans in housing.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 2 of 5', title:'Lease Agreements in California',
+    cards:[
+      {accent:'blue', key:'Written vs. oral agreements', text:'California recognizes both written and oral rental agreements, although written leases are strongly recommended. Lease terms longer than one year generally must be in writing to be enforceable. For all tenancies, a written lease best protects both parties by clearly documenting agreed terms.'},
+      {accent:'teal', key:'Tenant screening rules', text:'California law caps rental application fees at an amount adjusted periodically by the Consumer Price Index. Landlords may conduct background and credit checks but must obtain written consent from the tenant before screening.'},
+      {accent:'amber', key:'Applicant screening rights', text:'California law provides applicants with rights regarding tenant screening reports and adverse screening decisions. The specific obligations depend on whether a consumer report was used and whether adverse action was taken. Landlords should comply with all applicable consumer reporting requirements and consult current law when screening questions arise.'},
+      {accent:'red', key:'Fair housing violations are serious', text:'Violating California fair housing requirements can result in civil lawsuits, legal complaints with the federal government, and court orders threatening the landlord\'s ability to rent the property. All staff must follow these rules.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 3 of 5', title:'Security Deposits in California',
+    cards:[
+      {accent:'blue', key:'Deposit cap (as of July 1, 2024)', text:'California law caps security deposits at one month\'s rent for both furnished and unfurnished units. An exception applies to small landlords who are natural persons (not corporations) owning no more than two dwellings or four units — they may charge up to two months\' rent.'},
+      {accent:'teal', key:'Required disclosures', text:'California requires numerous disclosures depending on the property and circumstances, including disclosures related to lead-based paint (pre-1978 buildings), flood hazards, shared utilities, bed bug history, mold, asbestos, smoking policy, military ordnance, and rent control status where applicable. Not every disclosure applies to every property — landlords should verify which requirements apply to a specific unit.'},
+      {accent:'amber', key:'Returning the deposit', text:'Landlords must return the security deposit with an itemized statement of deductions within 21 days of the tenant moving out. Missing this deadline can expose landlords to penalties.'},
+      {accent:'red', key:'Allowable deductions only', text:'Deductions may only cover unpaid rent, cleaning necessary to return the unit to the level of cleanliness it was in at the beginning of the tenancy (subject to applicable California law), and damages beyond normal wear and tear. Normal wear and tear is never deductible.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 4 of 5', title:'Landlord Entry in California',
+    cards:[
+      {accent:'blue', key:'24-hour notice required', text:'California landlords must provide 24-hour advance notice before entering a rental property for non-emergency purposes such as maintenance and inspections. This is a legal requirement, not just a courtesy.'},
+      {accent:'teal', key:'Written notice preferred', text:'While oral notice is technically allowed in some situations, written notice is strongly recommended to create a record of compliance. The notice should state the date, time, and reason for entry.'},
+      {accent:'amber', key:'Emergency entry', text:'In genuine emergencies (fire, flood, gas leak, etc.), a landlord may enter without notice. However, emergency entry should be documented immediately after the fact.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 5 of 5', title:'Eviction in California',
+    cards:[
+      {accent:'blue', key:'Just-cause and no-fault eviction', text:'California landlords must have a legally valid reason to evict tenants, either through just-cause (fault) or no-fault eviction laws. Legal grounds include non-payment of rent, lease violations, illegal activity, and tenant-caused disturbances.'},
+      {accent:'teal', key:'No-fault eviction rules', text:'No-fault evictions can occur unrelated to tenant behavior — common examples include owner move-in and major renovation. In these cases, landlords may be responsible for paying relocation assistance to the displaced tenant. The specific requirements and the amount of assistance vary depending on the basis for eviction and applicable local ordinances. Additional local rules may apply beyond statewide law.'},
+      {accent:'amber', key:'Documentation is critical', text:'Since California\'s eviction process is highly regulated, landlords must establish proper cause and thoroughly document every step. Incomplete documentation is one of the most common reasons eviction cases fail in court.'},
+      {accent:'red', key:'No self-help eviction', text:'California strictly prohibits self-help eviction. Changing locks, removing a tenant\'s belongings, or shutting off utilities without a court order are illegal. All evictions must go through California\'s court process.'}
+    ]
+  },
+  {
+    type:'quiz',
+    questions:[
+      {q:'As of July 1, 2024, what is the security deposit cap for most California landlords?', opts:['1.5 times one month\'s rent','Two months\' rent','One month\'s rent','Three months\' rent'], correct:2, feedbackRight:'Correct! As of July 1, 2024, California caps security deposits at one month\'s rent for most landlords. Small individual landlords owning 2 dwellings or 4 units or fewer may charge up to two months\'.', feedbackWrong:'Not quite. As of July 1, 2024, California limits most landlords to one month\'s rent as a security deposit.'},
+      {q:'How many days does a California landlord have to return a security deposit after move-out?', opts:['14 days','21 days','30 days','45 days'], correct:1, feedbackRight:'Correct! California requires landlords to return the deposit with an itemized deduction statement within 21 days of move-out.', feedbackWrong:'Not quite. California landlords have 21 days to return the security deposit with an itemized statement.'},
+      {q:'How much notice must a California landlord give before entering a rental unit for a non-emergency?', opts:['12 hours','24 hours','48 hours','72 hours'], correct:1, feedbackRight:'Correct! California requires 24-hour advance notice before a landlord can enter a rental unit for non-emergency purposes.', feedbackWrong:'Not quite. California requires 24 hours\' notice before a landlord enters for non-emergency purposes.'},
+      {q:'Which best describes California\'s rules on written vs. oral lease agreements?', opts:['All California leases must always be in writing','California recognizes both written and oral agreements — but leases over one year must be in writing, and written leases are strongly recommended for all tenancies','Oral leases are never valid in California','Written leases are only required for units with more than two bedrooms'], correct:1, feedbackRight:'Correct! California recognizes oral rental agreements in many situations, but leases over one year must be in writing to be enforceable. Written leases are strongly recommended for all tenancies to protect both parties.', feedbackWrong:'Not quite. California recognizes both written and oral rental agreements. Leases over one year must be in writing to be enforceable, and written agreements are strongly recommended for all tenancies.'},
+      {q:'What must a California landlord do before conducting a credit or background check on a rental applicant?', opts:['Pay the applicant a processing fee','Obtain written consent from the applicant','File a disclosure with the state','Notify all other applicants'], correct:1, feedbackRight:'Correct! California requires landlords to obtain written consent from a prospective tenant before conducting a background or credit check. Additional consumer reporting obligations may also apply depending on the outcome of the screening.', feedbackWrong:'Not quite. California law requires landlords to get written consent from the applicant before screening. Additional consumer reporting obligations may also apply depending on how the screening is used.'},
+      {q:'What is a "no-fault" eviction in California?', opts:['An eviction where the tenant has done nothing wrong and the landlord has a non-tenant-related reason such as owner move-in or major renovation','An eviction that cannot be challenged in court','An eviction that requires no notice','An eviction where the landlord waives the right to back rent'], correct:0, feedbackRight:'Correct! No-fault evictions occur for reasons unrelated to tenant behavior, such as owner move-in or major renovation. These may require relocation assistance — with specific requirements varying by eviction basis and local ordinance.', feedbackWrong:'Not quite. A no-fault eviction occurs for reasons unrelated to tenant behavior, such as owner move-in or major renovation. These may require relocation assistance, with specific rules varying by local ordinance.'},
+      {q:'Which of the following is an illegal self-help eviction tactic in California?', opts:['Filing an unlawful detainer lawsuit','Serving a 3-day notice to pay or quit','Shutting off the tenant\'s utilities to force them to leave','Issuing a written notice of lease violation'], correct:2, feedbackRight:'Correct! Shutting off utilities to force a tenant out is an illegal self-help eviction tactic in California. All evictions must go through the courts.', feedbackWrong:'Not quite. Shutting off utilities to force a tenant out is illegal in California. Landlords must use the court process.'}
+    ]
+  }
+];
+let current=0,answers=[],answered=[],score=0;
+function setProgress(idx){const t=slides.length,p=Math.round(((idx+1)/t)*100);document.getElementById('prog-fill').style.width=p+'%';document.getElementById('prog-count').textContent='Step '+(idx+1)+' of '+t;}
+function renderLearn(s,idx){const c=s.cards.map(c=>{const b=c.list?`<ul>${c.list.map(i=>`<li>${i}</li>`).join('')}</ul>`:`<p>${c.text}</p>`;return`<div class="card ${c.accent}"><div class="card-label">${c.key}</div>${b}</div>`;}).join('');const ib=idx===slides.length-2;return`<div class="section-eyebrow">${s.label}</div><div class="section-title">${s.title}</div>${c}<div class="nav-row"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><span class="step-indicator">${idx+1} / ${slides.length}</span><button class="btn primary" onclick="go(${idx+1})">${ib?'Take the Quiz →':'Next →'}</button></div>`;}
+function renderQuiz(s,idx){const qc=s.questions.length,dc=answered.filter(a=>a!==undefined).length,ad=dc===qc;let h=`<div class="section-eyebrow">Section 6 of 6</div><div class="section-title">Knowledge Check</div>`;s.questions.forEach((q,qi)=>{const ia=answered[qi]!==undefined,sel=answers[qi];const oh=q.opts.map((o,oi)=>{let c='quiz-opt';if(ia&&oi===q.correct)c+=' correct';else if(ia&&oi===sel&&oi!==q.correct)c+=' wrong';return`<button class="${c}" onclick="answer(${qi},${oi})" ${ia?'disabled':''}>${o}</button>`;}).join('');const fh=ia?`<div class="feedback ${sel===q.correct?'correct':'wrong'}">${sel===q.correct?'✓ '+q.feedbackRight:'✗ '+q.feedbackWrong}</div>`:'';h+=`<div class="quiz-q-card"><div class="q-number">Question ${qi+1} of ${qc}</div><div class="q-text">${q.q}</div>${oh}${fh}</div>`;});h+=`<div class="nav-row"><button class="btn" onclick="go(${idx-1})">← Back to review</button><span class="step-indicator">${dc} of ${qc} answered</span><button class="btn primary" onclick="showResults()" ${ad?'':'disabled'}>See my results →</button></div>`;return h;}
+function renderResults(){const t=slides[slides.length-1].questions.length,p=Math.round((score/t)*100),c=2*Math.PI*48,d=(p/100)*c,rc=p>=80?'#0F6E56':p>=60?'#BA7517':'#A32D2D',hl=p>=80?'Well done!':p>=60?'Good effort!':'Keep studying!',sub=p>=80?'You have a solid grasp of California landlord-tenant law.':p>=60?'Review the sections where you missed questions, then retake the quiz.':'Go back through the training slides before retaking the quiz.';document.getElementById('prog-fill').style.width='100%';document.getElementById('prog-count').textContent='Complete';return`<div class="results-wrap">${p===100?'<div class="completion-banner"><span class="star">⭐</span><div><strong>Perfect score!</strong><p>You answered every question correctly.</p></div></div>':''}<div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${rc}" stroke-width="9" stroke-dasharray="${d.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round"/></svg><div class="score-num">${p}%</div></div><div class="result-headline">${hl}</div><div class="result-sub">${sub}</div><div class="result-tally">You got <strong>${score} of ${t}</strong> questions correct</div><div class="divider"></div><div class="topics-row"><span class="topic-badge a">Landlord Rights</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Lease & Disclosures</span><span class="topic-badge d">Eviction Process</span></div><div class="result-nav"><button class="btn" onclick="restartFull()">← Restart full training</button><button class="btn primary" onclick="retakeQuiz()">Retake quiz</button></div></div>`;}
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){setProgress(current);const s=slides[current];document.getElementById('content').innerHTML=s.type==='learn'?renderLearn(s,current):renderQuiz(s,current);window.scrollTo({top:0,behavior:'smooth'});}
+render();
+</script>
+</body>
+</html>

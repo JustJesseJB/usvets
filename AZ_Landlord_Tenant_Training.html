@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arizona Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1D285A;
+    --navy-mid: #2e3d7a;
+    --gold: #F7E100;
+    --gold-dark: #c4b400;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --blue-dark: #0C447C;
+    --teal: #0F6E56;
+    --teal-light: #E1F5EE;
+    --teal-dark: #085041;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-dark: #633806;
+    --red: #A32D2D;
+    --red-light: #FCEBEB;
+    --red-dark: #501313;
+    --gray-100: #F5F5F3;
+    --gray-200: #E8E8E4;
+    --gray-400: #9B9B96;
+    --gray-700: #444441;
+    --text: #1a1a18;
+    --text-muted: #5a5a56;
+    --border: rgba(0,0,0,0.1);
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--gray-100);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  header {
+    background: var(--navy);
+    padding: 0;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .org-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .header-text h1 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .header-text p {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+  }
+
+  /* Progress */
+  .progress-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  .progress-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .progress-count {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .progress-track {
+    height: 5px;
+    background: var(--gray-200);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--navy);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+
+  /* Section */
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-200);
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+  }
+
+  /* Cards */
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .card.blue { border-left: 4px solid var(--blue); }
+  .card.teal { border-left: 4px solid var(--teal); }
+  .card.amber { border-left: 4px solid var(--amber); }
+  .card.red { border-left: 4px solid var(--red); }
+
+  .card-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 5px;
+  }
+  .card.blue .card-label { color: var(--blue); }
+  .card.teal .card-label { color: var(--teal); }
+  .card.amber .card-label { color: var(--amber); }
+  .card.red .card-label { color: var(--red); }
+
+  .card p { font-size: 15px; color: var(--text-muted); }
+
+  .card ul {
+    margin-top: 4px;
+    padding-left: 1.1rem;
+  }
+
+  .card ul li {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* Nav */
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 22px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--gray-200);
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+
+  .btn.primary {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+
+  .btn.primary:hover { background: var(--navy-mid); border-color: var(--navy-mid); }
+
+  .step-indicator {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Quiz */
+  .quiz-q-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .q-number {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+
+  .q-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .quiz-opt {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: var(--gray-100);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .quiz-opt:hover { border-color: var(--navy); background: var(--blue-light); color: var(--blue-dark); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+  .quiz-opt:disabled { cursor: default; }
+
+  .feedback {
+    font-size: 13.5px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border: 1px solid var(--red); }
+
+  /* Results */
+  .results-wrap {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .score-ring-wrap {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1.25rem;
+    position: relative;
+  }
+
+  .score-ring-wrap svg { transform: rotate(-90deg); display: block; }
+
+  .score-num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .result-headline {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .result-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .result-tally {
+    display: inline-block;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 6px 18px;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-tally strong { color: var(--navy); }
+
+  .topics-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .topic-badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+
+  .divider { height: 1px; background: var(--gray-200); margin: 1.5rem 0; }
+
+  .result-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+  /* Completion banner */
+  .completion-banner {
+    background: var(--navy);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .completion-banner .star { font-size: 28px; }
+  .completion-banner p { font-size: 14px; opacity: 0.85; margin-top: 2px; }
+  .completion-banner strong { font-size: 16px; display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Arizona Landlord-Tenant Law</h1>
+      <p>Staff Training &amp; Competency Check</p>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Your progress</span>
+      <span class="progress-count" id="prog-count">Step 1 of 6</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="prog-fill" style="width: 16.6%"></div>
+    </div>
+  </div>
+
+  <div id="content"></div>
+</div>
+
+<script>
+const slides = [
+  {
+    type: 'learn',
+    label: 'Section 1 of 5',
+    title: 'Lease Agreements in Arizona',
+    cards: [
+      { accent: 'blue', key: 'Key rule', text: 'Many Arizona rental agreements may be oral; however, leases longer than one year generally must be in writing to be enforceable under Arizona\'s Statute of Frauds. Written leases are strongly recommended for all tenancies to set clear terms and expectations.' },
+      { accent: 'teal', key: 'Two types of leases', text: 'Most rental contracts are either month-to-month (renewed one month at a time) or fixed-term (defined start and end dates). Both are valid in Arizona.' },
+      { accent: 'amber', key: 'What landlords must share', text: 'Regardless of lease format, landlords must share the name and contact information of the property\'s managing party with the tenant. Arizona and federal law also require several additional disclosures depending on the property and circumstances.' }
+    ]
+  },
+  {
+    type: 'learn',
+    label: 'Section 2 of 5',
+    title: 'Mandatory Landlord Disclosures',
+    cards: [
+      { accent: 'blue', key: 'Required by law', text: 'Arizona and federal law require landlords to make several disclosures to tenants, depending on the property type and circumstances. These cover property ownership, health and safety, and tenant rights. The exact disclosures required can vary, so landlords should review both state statutes and applicable federal requirements.' },
+      { accent: 'teal', key: 'Key disclosures include', list: ['Name and contact info for the managing party', 'Move-in condition form: landlord must provide it and allow the tenant to note defects and return it (A.R.S. § 33-1321)', 'Any known bed bug infestation history', 'Presence of lead-based paint in qualifying units (federally required for pre-1978 buildings)', 'Whether the property is subject to a pending foreclosure', 'Landlord\'s right of entry (advance notice required)'] },
+      { accent: 'amber', key: 'Why it matters for U.S.VETS programs', text: 'Failing to make required disclosures can expose landlords to legal liability and may affect their ability to enforce lease terms or retain security deposits — which can impact veterans we place in housing.' }
+    ]
+  },
+  {
+    type: 'learn',
+    label: 'Section 3 of 5',
+    title: 'Security Deposit Rules',
+    cards: [
+      { accent: 'blue', key: 'Maximum amount', text: 'Arizona landlords may charge up to 1.5 times one month\'s rent as a security deposit (ARS § 33-1321). Charging more than this cap is a violation of state law.' },
+      { accent: 'teal', key: 'Move-in documentation', text: 'Under A.R.S. § 33-1321, landlords must provide tenants with a move-in condition form and give them a reasonable opportunity to note any pre-existing defects and return it. This documented record is essential for resolving deposit disputes at move-out.' },
+      { accent: 'amber', key: 'Returning the deposit', text: 'Under A.R.S. § 33-1321(D), the landlord must return the security deposit or provide an itemized statement of deductions within 14 business days (excluding weekends and legal holidays) after the tenant vacates, returns possession, and requests the deposit. Missing this deadline can result in penalties against the landlord.' },
+      { accent: 'red', key: 'Allowable deductions only', text: 'Landlords may only deduct for unpaid rent, damage beyond normal wear and tear, or costs the tenant agreed to in the lease. Normal wear and tear is never a valid deduction.' }
+    ]
+  },
+  {
+    type: 'learn',
+    label: 'Section 4 of 5',
+    title: 'Landlord Obligations',
+    cards: [
+      { accent: 'blue', key: 'Fair housing compliance', text: 'Landlords must follow federal and state fair housing laws and avoid any discriminatory practices when screening or selecting tenants — including veterans and individuals with disabilities.' },
+      { accent: 'teal', key: 'Habitability requirements', text: 'Landlords must ensure that health and safety codes are met, conduct repairs in a timely fashion, and maintain the rental unit in a safe and habitable condition at all times.' },
+      { accent: 'amber', key: 'Entry notice required', text: 'Landlords must provide at least 2 days\' advance notice before entering a tenant\'s unit for non-emergency purposes. Emergency entry is an exception but must be documented.' }
+    ]
+  },
+  {
+    type: 'learn',
+    label: 'Section 5 of 5',
+    title: 'Eviction: Process and Limits',
+    cards: [
+      { accent: 'blue', key: 'Eviction basis required', text: 'Arizona landlords must follow the statutory eviction process and have a legal basis recognized under Arizona law or the lease agreement. However, Arizona is not generally considered a statewide "just-cause" eviction state like California or Oregon — it is generally landlord-friendly compared to those jurisdictions. Retaliation against a tenant is still prohibited.' },
+      { accent: 'teal', key: 'Valid reasons for eviction', list: ['Non-payment of rent', 'Damage to the rental unit', 'Lease violations', 'Illegal activities on the premises', 'Nuisance to other tenants', 'Refusing landlord access after proper notice'] },
+      { accent: 'amber', key: 'Eviction process steps', list: ['Landlord issues notice: 5- or 10-day pay-or-quit, cure-or-quit, or unconditional quit', 'In some cases, the tenant may cure (fix) the issue to avoid eviction', 'If unresolved, the landlord files an eviction case with the court', 'A judge hears the case and issues a ruling'] },
+      { accent: 'red', key: 'What landlords cannot do', text: 'Landlords may NOT remove a tenant\'s belongings, change locks, or shut off utilities as a form of self-help eviction. These actions are illegal in Arizona regardless of unpaid rent or lease violations.' }
+    ]
+  },
+  {
+    type: 'quiz',
+    questions: [
+      {
+        q: 'In Arizona, what is the maximum security deposit a landlord can legally charge?',
+        opts: ['One month\'s rent', '1.5 times one month\'s rent', 'Two months\' rent', 'There is no legal limit'],
+        correct: 1,
+        feedbackRight: 'Correct! Arizona law (ARS § 33-1321) caps security deposits at 1.5 times the monthly rent.',
+        feedbackWrong: 'Not quite. Arizona law caps security deposits at 1.5 times one month\'s rent, per ARS § 33-1321.'
+      },
+      {
+        q: 'How many days does an Arizona landlord have to return a security deposit after a tenant moves out?',
+        opts: ['14 calendar days', '14 business days (excluding weekends and holidays)', '30 calendar days', '60 calendar days'],
+        correct: 1,
+        feedbackRight: 'Correct! Under A.R.S. § 33-1321(D), landlords must return the deposit or provide an itemized statement within 14 business days — excluding weekends and legal holidays — after the tenant vacates and requests the deposit.',
+        feedbackWrong: 'Not quite. Arizona law specifies 14 business days (excluding weekends and legal holidays) after the tenant vacates and requests the deposit — not simply 14 calendar days.'
+      },
+      {
+        q: 'Under Arizona law, when must a lease agreement be in writing to be enforceable?',
+        opts: ['All leases must always be in writing', 'Leases longer than one year must be in writing', 'Only leases over $1,500/month must be in writing', 'Written leases are never required in Arizona'],
+        correct: 1,
+        feedbackRight: 'Correct! Under Arizona\'s Statute of Frauds, leases longer than one year generally must be in writing to be enforceable. Written leases are strongly recommended for all tenancies.',
+        feedbackWrong: 'Not quite. Arizona\'s Statute of Frauds requires leases longer than one year to be in writing to be enforceable. Shorter-term agreements may be oral, but written leases are always recommended.'
+      },
+      {
+        q: 'Which of the following best describes Arizona\'s eviction standard?',
+        opts: ['Arizona is a strict "just-cause" eviction state like California or Oregon', 'Landlords may evict tenants for any reason at any time with no notice', 'Landlords must follow the statutory eviction process and have a legal basis under Arizona law or the lease — but Arizona is not a statewide just-cause eviction state', 'Tenants can only be evicted by a court order, never by landlord notice'],
+        correct: 2,
+        feedbackRight: 'Correct! Arizona requires landlords to follow the statutory process and have a recognized legal basis, but it is not a statewide just-cause eviction state. It is generally considered landlord-friendly compared to states like California.',
+        feedbackWrong: 'Not quite. Arizona landlords must follow statutory procedures and have a legal basis for eviction, but Arizona is not a statewide just-cause eviction state — it is generally more landlord-friendly than states like California or Oregon.'
+      },
+      {
+        q: 'Within how many days of move-in must a landlord provide a move-in/move-out condition checklist?',
+        opts: ['The landlord must provide a move-in form and allow the tenant to note defects and return it (A.R.S. § 33-1321)', 'The landlord must complete a checklist alone and file it with the county', 'No move-in documentation is required in Arizona', 'The tenant must submit their own written condition report within 48 hours'],
+        correct: 0,
+        feedbackRight: 'Correct! Under A.R.S. § 33-1321, the landlord must provide a move-in condition form and give the tenant a reasonable opportunity to note any pre-existing defects and return it.',
+        feedbackWrong: 'Not quite. Arizona law (A.R.S. § 33-1321) requires the landlord to furnish a move-in condition form and allow the tenant to document defects and return it — it is a two-step process, not a unilateral landlord action.'
+      },
+      {
+        q: 'If a landlord wants to enter a tenant\'s unit for a non-emergency repair, what must they do first?',
+        opts: ['No notice is required — landlords can enter anytime', 'Provide at least 2 days\' advance notice', 'Get written permission from the tenant for each visit', 'File a form with the county clerk'],
+        correct: 1,
+        feedbackRight: 'Correct! Landlords must provide at least 2 days\' advance notice before entering for non-emergency purposes.',
+        feedbackWrong: 'Landlords must provide advance notice — typically at least 2 days — before entering for non-emergency reasons.'
+      },
+      {
+        q: 'Which of the following is an example of illegal "self-help" eviction in Arizona?',
+        opts: ['Filing an eviction case with the court', 'Issuing a 5-day notice to pay rent', 'Changing the locks without a court order', 'Sending a certified letter to the tenant'],
+        correct: 2,
+        feedbackRight: 'Correct! Changing locks, removing belongings, or shutting off utilities without a court order are all illegal self-help eviction tactics in Arizona.',
+        feedbackWrong: 'Changing the locks without a court order is an illegal self-help eviction tactic. Landlords must go through the court process.'
+      }
+    ]
+  }
+];
+
+let current = 0;
+let answers = [];
+let answered = [];
+let score = 0;
+
+function setProgress(idx) {
+  const total = slides.length;
+  const pct = Math.round(((idx + 1) / total) * 100);
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('prog-count').textContent = 'Step ' + (idx + 1) + ' of ' + total;
+}
+
+function renderLearn(slide, idx) {
+  const cardsHTML = slide.cards.map(c => {
+    const body = c.list
+      ? `<ul>${c.list.map(i => `<li>${i}</li>`).join('')}</ul>`
+      : `<p>${c.text}</p>`;
+    return `<div class="card ${c.accent}"><div class="card-label">${c.key}</div>${body}</div>`;
+  }).join('');
+
+  const isBeforeQuiz = idx === slides.length - 2;
+
+  return `
+    <div class="section-eyebrow">${slide.label}</div>
+    <div class="section-title">${slide.title}</div>
+    ${cardsHTML}
+    <div class="nav-row">
+      <button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button>
+      <span class="step-indicator">${idx+1} / ${slides.length}</span>
+      <button class="btn primary" onclick="go(${idx+1})">${isBeforeQuiz ? 'Take the Quiz →' : 'Next →'}</button>
+    </div>
+  `;
+}
+
+function renderQuiz(slide, idx) {
+  const qCount = slide.questions.length;
+  const doneCount = answered.filter(a => a !== undefined).length;
+  const allDone = doneCount === qCount;
+
+  let html = `
+    <div class="section-eyebrow">Section 6 of 6</div>
+    <div class="section-title">Knowledge Check</div>
+  `;
+
+  slide.questions.forEach((q, qi) => {
+    const isAnswered = answered[qi] !== undefined;
+    const selected = answers[qi];
+
+    const optsHTML = q.opts.map((opt, oi) => {
+      let cls = 'quiz-opt';
+      if (isAnswered && oi === q.correct) cls += ' correct';
+      else if (isAnswered && oi === selected && oi !== q.correct) cls += ' wrong';
+      return `<button class="${cls}" onclick="answer(${qi},${oi})" ${isAnswered ? 'disabled' : ''}>${opt}</button>`;
+    }).join('');
+
+    const feedbackHTML = isAnswered
+      ? `<div class="feedback ${selected === q.correct ? 'correct' : 'wrong'}">${selected === q.correct ? '✓ ' + q.feedbackRight : '✗ ' + q.feedbackWrong}</div>`
+      : '';
+
+    html += `
+      <div class="quiz-q-card">
+        <div class="q-number">Question ${qi + 1} of ${qCount}</div>
+        <div class="q-text">${q.q}</div>
+        ${optsHTML}
+        ${feedbackHTML}
+      </div>
+    `;
+  });
+
+  html += `
+    <div class="nav-row">
+      <button class="btn" onclick="go(${idx-1})">← Back to review</button>
+      <span class="step-indicator">${doneCount} of ${qCount} answered</span>
+      <button class="btn primary" onclick="showResults()" ${allDone ? '' : 'disabled'}>See my results →</button>
+    </div>
+  `;
+
+  return html;
+}
+
+function renderResults() {
+  const total = slides[slides.length - 1].questions.length;
+  const pct = Math.round((score / total) * 100);
+  const c = 2 * Math.PI * 48;
+  const dash = (pct / 100) * c;
+  const ringColor = pct >= 80 ? '#0F6E56' : pct >= 60 ? '#BA7517' : '#A32D2D';
+  const headline = pct >= 80 ? 'Well done!' : pct >= 60 ? 'Good effort!' : 'Keep studying!';
+  const sub = pct >= 80
+    ? 'You have a solid grasp of Arizona landlord-tenant law fundamentals.'
+    : pct >= 60
+    ? 'Review the sections where you missed questions, then retake the quiz.'
+    : 'Go back through the training slides before retaking the quiz.';
+
+  document.getElementById('prog-fill').style.width = '100%';
+  document.getElementById('prog-count').textContent = 'Complete';
+
+  return `
+    <div class="results-wrap">
+      ${pct === 100 ? `<div class="completion-banner"><span class="star">⭐</span><div><strong>Perfect score!</strong><p>You answered every question correctly.</p></div></div>` : ''}
+      <div class="score-ring-wrap">
+        <svg width="110" height="110" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/>
+          <circle cx="55" cy="55" r="48" fill="none" stroke="${ringColor}" stroke-width="9"
+            stroke-dasharray="${dash.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round"/>
+        </svg>
+        <div class="score-num">${pct}%</div>
+      </div>
+      <div class="result-headline">${headline}</div>
+      <div class="result-sub">${sub}</div>
+      <div class="result-tally">You got <strong>${score} of ${total}</strong> questions correct</div>
+      <div class="divider"></div>
+      <div class="topics-row">
+        <span class="topic-badge a">Lease Agreements</span>
+        <span class="topic-badge b">Security Deposits</span>
+        <span class="topic-badge c">Landlord Obligations</span>
+        <span class="topic-badge d">Eviction Process</span>
+      </div>
+      <div class="result-nav">
+        <button class="btn" onclick="restartFull()">← Restart full training</button>
+        <button class="btn primary" onclick="retakeQuiz()">Retake quiz</button>
+      </div>
+    </div>
+  `;
+}
+
+function answer(qi, oi) {
+  if (answered[qi] !== undefined) return;
+  answers[qi] = oi;
+  answered[qi] = oi;
+  const q = slides[slides.length - 1].questions[qi];
+  if (oi === q.correct) score++;
+  render();
+}
+
+function showResults() {
+  document.getElementById('content').innerHTML = renderResults();
+}
+
+function retakeQuiz() {
+  answers = [];
+  answered = [];
+  score = 0;
+  current = slides.length - 1;
+  render();
+}
+
+function restartFull() {
+  answers = [];
+  answered = [];
+  score = 0;
+  current = 0;
+  render();
+}
+
+function go(n) {
+  if (n < 0 || n >= slides.length) return;
+  current = n;
+  render();
+}
+
+function render() {
+  setProgress(current);
+  const slide = slides[current];
+  let html = '';
+  if (slide.type === 'learn') html = renderLearn(slide, current);
+  else html = renderQuiz(slide, current);
+  document.getElementById('content').innerHTML = html;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+render();
+</script>
+</body>
+</html>

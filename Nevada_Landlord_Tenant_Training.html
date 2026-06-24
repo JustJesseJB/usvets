@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nevada Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4; --gray-400: #9B9B96;
+    --text: #1a1a18; --text-muted: #5a5a56;
+    --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-bar { height: 5px; background: var(--gray-200); border-radius: 99px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 99px; transition: width 0.35s ease; }
+  .card { background: #fff; border-radius: var(--radius); box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); overflow: hidden; }
+  .card-header { padding: 1.5rem 2rem 1.25rem; border-bottom: 1px solid var(--gray-200); }
+  .slide-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+  .slide-title { font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+  .card-body { padding: 1.75rem 2rem; }
+  .intro-text { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.65; }
+  .section-block { margin-bottom: 1.5rem; }
+  .section-block:last-child { margin-bottom: 0; }
+  .section-heading { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .callout { border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+  .callout-body { flex: 1; }
+  .callout-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .callout-text { font-size: 14px; line-height: 1.55; }
+  .callout.blue { background: var(--blue-light); } .callout.blue .callout-title { color: var(--blue-dark); } .callout.blue .callout-text { color: #1a3a5e; }
+  .callout.teal { background: var(--teal-light); } .callout.teal .callout-title { color: var(--teal-dark); } .callout.teal .callout-text { color: #0a3326; }
+  .callout.amber { background: var(--amber-light); } .callout.amber .callout-title { color: var(--amber-dark); } .callout.amber .callout-text { color: #4a2e00; }
+  .callout.red { background: var(--red-light); } .callout.red .callout-title { color: var(--red-dark); } .callout.red .callout-text { color: #3d1010; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .detail-item { background: var(--gray-100); border-radius: var(--radius-sm); padding: 12px 14px; }
+  .detail-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+  .detail-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .detail-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .list-items { list-style: none; }
+  .list-items li { font-size: 14px; padding: 7px 0; border-bottom: 1px solid var(--gray-200); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+  .list-items li:last-child { border-bottom: none; }
+  .list-items li::before { content: '•'; color: var(--navy); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .card-nav { padding: 1.25rem 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: center; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 20px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: #16204a; }
+  .btn:disabled { opacity: 0.4; cursor: default; }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.25rem 0; }
+  .question-text { font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 1.25rem; }
+  .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.25rem; }
+  .option { border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 13px 16px; font-size: 14px; cursor: pointer; transition: all 0.15s; background: #fff; text-align: left; width: 100%; display: flex; align-items: center; gap: 12px; }
+  .option:hover:not(:disabled) { border-color: var(--navy); background: #f0f3fa; }
+  .option .opt-letter { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; color: var(--text-muted); }
+  .option.correct { border-color: var(--teal); background: var(--teal-light); } .option.correct .opt-letter { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .option.wrong { border-color: var(--red); background: var(--red-light); } .option.wrong .opt-letter { background: var(--red); border-color: var(--red); color: #fff; }
+  .feedback { border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.55; margin-bottom: 1rem; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border-left: 3px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border-left: 3px solid var(--red); }
+  .quiz-progress { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .results-wrap { padding: 2rem; text-align: center; }
+  .score-ring-wrap { position: relative; display: inline-block; margin: 1rem auto; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 22px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .result-tally { font-size: 14px; color: var(--text-muted); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 1rem 0; }
+  .topic-badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .result-nav { display: flex; gap: 10px; justify-content: center; margin-top: 1.25rem; }
+  @media (max-width: 600px) {
+    .header-inner { padding: 1.25rem; } .main { padding: 1.25rem 1rem 3rem; }
+    .card-header, .card-body, .card-nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .detail-grid { grid-template-columns: 1fr; } .results-wrap { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Nevada Landlord-Tenant Law</h1>
+      <p>Staff Training Module &mdash; Property & Housing Programs</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Progress</span>
+      <span class="progress-count" id="prog-count">Slide 1 of 6</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:16.7%"></div></div>
+  </div>
+  <div class="card" id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type: 'learn', label: 'Overview', title: 'Nevada Landlord-Tenant Law: The Basics',
+    intro: 'Nevada landlord-tenant law governs the rights and responsibilities of landlords and tenants across the state. U.S.VETS staff working with veterans in Nevada housing programs should understand these rules to protect veteran residents and work effectively with partner landlords.',
+    sections: [
+      {
+        heading: 'Key Facts at a Glance', type: 'grid',
+        items: [
+          { label: 'Security Deposit Cap', value: '3 months\' rent', sub: 'Highest cap of any U.S.VETS state' },
+          { label: 'Deposit Return Deadline', value: '30 days', sub: 'After tenant vacates' },
+          { label: 'Entry Notice', value: '24 hours', sub: 'For most non-emergency entries' },
+          { label: 'Eviction Notice (Non-Payment)', value: '7 days', sub: 'Pay or quit notice' },
+          { label: 'Written Lease Required', value: 'Recommended', sub: 'Required for terms over 1 year' },
+          { label: 'Application Fee Cap', value: 'Capped by law', sub: 'Subject to periodic adjustment' }
+        ]
+      },
+      {
+        heading: 'Why This Matters for U.S.VETS', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '🏠', title: 'Housing program staff', text: 'Nevada\'s 3-month deposit cap is the highest of any U.S.VETS operating state. Staff should know this when helping veterans understand what they may owe upfront and what they can expect returned.' },
+          { type: 'teal', icon: '⚖️', title: 'Case managers', text: 'Nevada requires landlords to follow specific statutory notice and eviction procedures. Understanding these timelines helps staff intervene early and connect veterans with legal assistance when needed.' },
+          { type: 'amber', icon: '📋', title: 'Property liaisons', text: 'Partner landlords must follow proper documentation practices, entry notice requirements, and deposit return procedures. A move-in condition report is strongly recommended for all tenancies.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Lease Agreements', title: 'Nevada Lease Agreements',
+    intro: 'Nevada recognizes both written and oral rental agreements, though written leases are strongly recommended for clarity and enforceability. Lease terms longer than one year generally must be in writing to be enforceable.',
+    sections: [
+      {
+        heading: 'Lease Types', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '📄', title: 'Fixed-term lease', text: 'Specifies a start and end date — typically one year. Both parties are bound to the terms. At the end of the term, the lease may be renewed, converted to month-to-month, or terminated.' },
+          { type: 'teal', icon: '🔄', title: 'Month-to-month lease', text: 'Renews automatically each month until either party provides proper notice to terminate. More flexible but offers less long-term stability for the tenant.' },
+          { type: 'amber', icon: '⚠️', title: 'Written vs. oral agreements', text: 'Nevada recognizes oral rental agreements, particularly for month-to-month tenancies. However, oral agreements are difficult to enforce and open to dispute. Written leases are strongly recommended in all circumstances.' }
+        ]
+      },
+      {
+        heading: 'What a Well-Drafted Nevada Lease Should Include', type: 'list',
+        items: [
+          'Names and contact information of all parties (landlord and all tenants)',
+          'Property address and description of the premises',
+          'Lease term (start and end dates)',
+          'Monthly rent amount, due date, and acceptable payment methods',
+          'Security deposit amount and conditions for return or deduction',
+          'Pet policy, parking, and utility responsibilities',
+          'Entry notice procedures',
+          'Rules regarding subletting, guests, and alterations'
+        ]
+      },
+      {
+        heading: 'Tenant Screening', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '🔍', title: 'Application fees', text: 'Nevada caps application fees by law. The cap is subject to periodic adjustment — staff should not rely on a specific dollar figure as it may become outdated.' },
+          { type: 'amber', icon: '📋', title: 'Consumer reporting requirements', text: 'Landlords using tenant screening reports should comply with applicable federal and state consumer reporting requirements. Specific disclosure obligations depend on whether adverse action is taken and which reports are used.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Security Deposits', title: 'Security Deposits in Nevada',
+    intro: 'Nevada allows landlords to charge up to three months\' rent as a security deposit — the highest cap among U.S.VETS operating states. Specific rules govern how deposits must be handled, documented, and returned.',
+    sections: [
+      {
+        heading: 'Deposit Rules at a Glance', type: 'grid',
+        items: [
+          { label: 'Maximum Amount', value: '3 months\' rent', sub: 'Hard cap under Nevada law' },
+          { label: 'Return Deadline', value: '30 days', sub: 'After tenant vacates' },
+          { label: 'Itemized List', value: 'Required', sub: 'For any deductions made' },
+          { label: 'Move-In Condition Report', value: 'Strongly recommended', sub: 'Best practice for all tenancies' }
+        ]
+      },
+      {
+        heading: 'Move-In Documentation', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '📋', title: 'Condition report at move-in', text: 'A move-in condition report or checklist is strongly recommended and commonly used to document the property\'s condition before a tenant takes possession. This protects both parties from disputes at move-out.' },
+          { type: 'blue', icon: '📸', title: 'Photos and records', text: 'Landlords should thoroughly document property condition at move-in and move-out with dated photos and written notes. This documentation supports their position if deposit deductions are disputed.' }
+        ]
+      },
+      {
+        heading: 'Allowable Deductions', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '💰', title: 'Unpaid rent', text: 'Any rent owed at the time the tenant vacates may be deducted from the security deposit.' },
+          { type: 'amber', icon: '🔨', title: 'Damage beyond normal wear and tear', text: 'Landlords may deduct for damage that exceeds ordinary use — holes in walls, broken fixtures, significant staining. Normal wear (minor scuffs, faded paint) is not deductible.' },
+          { type: 'teal', icon: '🧹', title: 'Cleaning costs', text: 'Costs to restore the unit to the condition it was in at the beginning of the tenancy may be deducted, provided they are itemized.' }
+        ]
+      },
+      {
+        heading: 'Penalties for Non-Compliance', type: 'callouts',
+        items: [
+          { type: 'red', icon: '⚖️', title: 'Wrongful withholding', text: 'If a landlord fails to return the deposit or provide an itemized list within 30 days, the tenant may pursue legal remedies including damages and attorney fees. Staff should help veterans connect with legal aid if a deposit dispute arises.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Landlord Obligations', title: 'Landlord Obligations & Tenant Rights',
+    intro: 'Nevada law places real duties on landlords to maintain safe, habitable properties and respect tenant rights. Tenants have legal remedies when those duties are not met.',
+    sections: [
+      {
+        heading: 'Habitability Requirements', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '🏗️', title: 'Safe and habitable conditions', text: 'Nevada landlords must maintain rental units in a condition that is safe and fit for habitation — including working heat, plumbing, electrical systems, and structural integrity. This duty cannot be waived by the lease.' },
+          { type: 'blue', icon: '🔧', title: 'Repair obligations', text: 'After receiving written notice from a tenant, landlords must make repairs within a reasonable time. For urgent habitability issues, prompt action is expected. Tenants should always make repair requests in writing to create a record.' },
+          { type: 'amber', icon: '🚪', title: 'Entry notice — 24 hours', text: 'For most non-emergency entries, Nevada landlords generally must provide at least 24 hours\' notice. Emergency situations (such as fire or flooding) may allow immediate entry. Entry must occur at a reasonable time.' }
+        ]
+      },
+      {
+        heading: 'Required Disclosures', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '📋', title: 'Property condition disclosures', text: 'Nevada requires various disclosures depending on the property and circumstances, including disclosures related to lead-based paint, mold, shared utilities, and other conditions where applicable.' },
+          { type: 'amber', icon: '🏦', title: 'Foreclosure disclosure', text: 'Nevada has requirements related to disclosing foreclosure status to tenants. These requirements have changed over time — landlords should verify current statutory language to ensure compliance.' }
+        ]
+      },
+      {
+        heading: 'Fair Housing', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '⚖️', title: 'Federal and state protections', text: 'Nevada landlords must comply with the federal Fair Housing Act, which prohibits discrimination based on race, color, religion, sex, national origin, familial status, and disability. Nevada law extends additional state-level protections.' },
+          { type: 'red', icon: '💸', title: 'Penalties for violations', text: 'Fair housing violations may result in administrative penalties, civil liability, damages, attorney fees, and other legal consequences. Landlords accused of violations should consult legal counsel immediately.' }
+        ]
+      },
+      {
+        heading: 'Retaliation Protections', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'Retaliation is prohibited', text: 'Landlords cannot raise rent, reduce services, or threaten eviction because a tenant filed a complaint, requested repairs, or exercised a legal right. Retaliation is a separate legal violation under Nevada law.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Eviction Process', title: 'Eviction Law in Nevada',
+    intro: 'Nevada landlords must follow statutory notice and eviction procedures and have a legally recognized basis for eviction where required by law and the lease agreement. The specific notices and timelines depend on the reason for eviction.',
+    sections: [
+      {
+        heading: 'Common Grounds for Eviction', type: 'list',
+        items: [
+          'Non-payment of rent',
+          'Violation of lease terms',
+          'Illegal activity on the premises',
+          'Overstaying the lease term (holdover tenants)',
+          'Failure to maintain the unit in a habitable condition',
+          'Unauthorized occupants or pets'
+        ]
+      },
+      {
+        heading: 'Key Notice Periods', type: 'grid',
+        items: [
+          { label: 'Non-Payment of Rent', value: '7-day notice', sub: 'Pay or quit' },
+          { label: 'Lease Violation', value: '5-day notice', sub: 'Cure or quit' },
+          { label: 'Nuisance / Illegal Activity', value: '3-day notice', sub: 'Quit without option to cure' },
+          { label: 'Termination (No Cause)', value: '30-day notice', sub: 'Month-to-month tenancy' }
+        ]
+      },
+      {
+        heading: 'The Eviction Process', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '1️⃣', title: 'Step 1: Written Notice', text: 'The landlord must serve the appropriate written notice. Landlords should thoroughly document lease violations, notices, communications, and property conditions to support their case.' },
+          { type: 'amber', icon: '2️⃣', title: 'Step 2: File for Summary Eviction', text: 'If the tenant does not comply with the notice, the landlord may file for eviction (summary eviction) in Justice Court. The court schedules a hearing.' },
+          { type: 'teal', icon: '3️⃣', title: 'Step 3: Court Hearing', text: 'Both parties present their case. If the landlord prevails, the court issues an order for removal. The tenant may have a brief window to appeal.' },
+          { type: 'red', icon: '4️⃣', title: 'Step 4: Lock-Out Order', text: 'If the tenant still does not vacate, the landlord can request a lock-out order. Only a constable or sheriff may physically enforce removal — not the landlord.' }
+        ]
+      },
+      {
+        heading: 'Self-Help Evictions Are Illegal', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'No lock-outs or utility shutoffs', text: 'Nevada landlords cannot change locks, remove doors, shut off utilities, or remove tenant belongings to force someone out. These actions are illegal regardless of how much rent is owed and can expose the landlord to civil liability.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'quiz', label: 'Knowledge Check', title: 'Nevada Law: Knowledge Check',
+    questions: [
+      {
+        text: 'What is the maximum security deposit a Nevada landlord may charge?',
+        options: ['One month\'s rent', 'Two months\' rent', 'Three months\' rent', 'There is no cap in Nevada'],
+        correct: 2,
+        feedback: 'Nevada caps security deposits at three months\' rent — the highest cap among all U.S.VETS operating states. This is important context when helping veterans plan for move-in costs.'
+      },
+      {
+        text: 'How long does a Nevada landlord have to return a security deposit after a tenant moves out?',
+        options: ['14 days', '21 days', '30 days', '45 days'],
+        correct: 2,
+        feedback: 'Nevada landlords have 30 days to return the security deposit or provide an itemized list of deductions. Failure to do so can result in the tenant pursuing legal remedies including damages and attorney fees.'
+      },
+      {
+        text: 'Nevada recognizes oral rental agreements.',
+        options: ['True — particularly for month-to-month tenancies, though written leases are strongly recommended', 'False — all Nevada leases must be in writing', 'True — but only for leases under 6 months', 'False — Nevada requires written leases for all tenancies'],
+        correct: 0,
+        feedback: 'True. Nevada recognizes both written and oral rental agreements, particularly for month-to-month tenancies. However, oral agreements are difficult to enforce and open to dispute. Written leases are strongly recommended in all circumstances, and leases longer than one year generally must be in writing to be enforceable.'
+      },
+      {
+        text: 'How much notice must a Nevada landlord generally give before entering a tenant\'s unit for a non-emergency?',
+        options: ['No notice required', '12 hours', '24 hours', '48 hours'],
+        correct: 2,
+        feedback: 'For most non-emergency entries, Nevada landlords generally must provide at least 24 hours\' notice. Emergency situations may allow immediate entry. Entry must also occur at a reasonable time.'
+      },
+      {
+        text: 'A veteran\'s landlord wants to evict them for non-payment of rent. What is the minimum notice period the landlord must give?',
+        options: ['3 days', '5 days', '7 days', '30 days'],
+        correct: 2,
+        feedback: 'For non-payment of rent, Nevada landlords must give a 7-day pay-or-quit notice before filing for eviction. Different violations have different notice periods — lease violations typically require a 5-day notice, while nuisance or illegal activity can require only a 3-day notice.'
+      },
+      {
+        text: 'Which of the following best describes Nevada\'s approach to eviction?',
+        options: [
+          'Nevada is a statewide just-cause eviction state — landlords must prove tenant wrongdoing in all cases',
+          'Nevada landlords must follow statutory notice and eviction procedures and have a legally recognized basis for eviction where required by law and the lease',
+          'Nevada has no eviction laws — landlords may remove tenants at any time',
+          'Nevada requires 90 days\' notice for all evictions'
+        ],
+        correct: 1,
+        feedback: 'Nevada is not a statewide just-cause eviction state in the way California or Oregon are. However, landlords must follow specific statutory notice procedures and have a legally recognized basis for eviction where required by law and the lease agreement. The process and requirements vary by the reason for eviction.'
+      },
+      {
+        text: 'A landlord shuts off a tenant\'s electricity after the tenant falls behind on rent. Is this legal in Nevada?',
+        options: [
+          'Yes — if rent is more than 7 days overdue',
+          'Yes — if it is specified in the lease',
+          'No — shutting off utilities to force a tenant out is an illegal self-help eviction tactic',
+          'No — only if the landlord also provides a written notice'
+        ],
+        correct: 2,
+        feedback: 'Shutting off utilities to force a tenant out is an illegal self-help eviction in Nevada. Landlords must use the formal court process regardless of how much rent is owed. Staff should document this and help the veteran connect with legal aid immediately.'
+      }
+    ]
+  }
+];
+
+let current = 0, answers = [], answered = [], score = 0;
+
+function setProgress(idx) {
+  document.getElementById('prog-fill').style.width = ((idx+1)/slides.length*100)+'%';
+  document.getElementById('prog-count').textContent = idx < slides.length-1 ? 'Slide '+(idx+1)+' of '+(slides.length-1) : 'Knowledge Check';
+}
+
+function renderLearn(slide, idx) {
+  let sectionsHtml = '';
+  for (const sec of slide.sections) {
+    let inner = '';
+    if (sec.type==='grid') inner = '<div class="detail-grid">'+sec.items.map(i=>`<div class="detail-item"><div class="detail-label">${i.label}</div><div class="detail-value">${i.value}</div>${i.sub?`<div class="detail-sub">${i.sub}</div>`:''}</div>`).join('')+'</div>';
+    else if (sec.type==='callouts') inner = sec.items.map(i=>`<div class="callout ${i.type}"><div class="callout-icon">${i.icon}</div><div class="callout-body"><div class="callout-title">${i.title}</div><div class="callout-text">${i.text}</div></div></div>`).join('');
+    else if (sec.type==='list') inner = '<ul class="list-items">'+sec.items.map(i=>`<li>${i}</li>`).join('')+'</ul>';
+    sectionsHtml += `<div class="section-block"><div class="section-heading">${sec.heading}</div>${inner}</div>`;
+  }
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${slide.intro?`<p class="intro-text">${slide.intro}</p>`:''}${sectionsHtml}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><button class="btn primary" onclick="go(${idx+1})">${idx===slides.length-2?'Take the Quiz →':'Next →'}</button></div>`;
+}
+
+function renderQuiz(slide, idx) {
+  const allAnswered = slide.questions.every((_,qi)=>answered[qi]!==undefined);
+  let qHtml = slide.questions.map((q,qi)=>{
+    const ua=answered[qi];
+    const opts=q.options.map((opt,oi)=>{
+      let cls='option';
+      if(ua!==undefined){if(oi===q.correct)cls+=' correct';else if(oi===ua)cls+=' wrong';}
+      return `<button class="${cls}" onclick="answer(${qi},${oi})" ${ua!==undefined?'disabled':''}><span class="opt-letter">${['A','B','C','D'][oi]}</span><span>${opt}</span></button>`;
+    }).join('');
+    const fb=ua!==undefined?`<div class="feedback ${ua===q.correct?'correct':'wrong'}">${ua===q.correct?'✅ ':'❌ '}${q.feedback}</div>`:'';
+    return `<div style="margin-bottom:2rem;padding-bottom:${qi<slide.questions.length-1?'2rem':'0'};border-bottom:${qi<slide.questions.length-1?'1px solid var(--gray-200)':'none'}"><div class="quiz-progress">Question ${qi+1} of ${slide.questions.length}</div><div class="question-text">${q.text}</div><div class="options">${opts}</div>${fb}</div>`;
+  }).join('');
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${qHtml}${allAnswered?`<div style="text-align:center;margin-top:1rem"><button class="btn primary" onclick="showResults()">See My Results →</button></div>`:''}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})">← Back to Training</button><span style="font-size:13px;color:var(--text-muted)">${Object.keys(answered).length} of ${slide.questions.length} answered</span></div>`;
+}
+
+function renderResults() {
+  const total=slides[slides.length-1].questions.length, pct=Math.round((score/total)*100);
+  const c=2*Math.PI*48, dash=(pct/100)*c;
+  const ringColor=pct>=80?'#0F6E56':pct>=60?'#BA7517':'#A32D2D';
+  const headline=pct>=80?'Well done!':pct>=60?'Good effort!':'Keep studying!';
+  const sub=pct>=80?'You have a solid grasp of Nevada landlord-tenant law.':pct>=60?'Review the sections where you missed questions, then retake.':'Go back through the training slides before retaking.';
+  document.getElementById('prog-fill').style.width='100%';
+  document.getElementById('prog-count').textContent='Complete';
+  return `<div class="results-wrap"><div class="slide-label" style="text-align:center;margin-bottom:0.5rem">Quiz Complete</div>
+    <div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${ringColor}" stroke-width="9" stroke-dasharray="${dash.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 55 55)"/></svg><div class="score-num">${pct}%</div></div>
+    <div class="result-headline">${headline}</div><div class="result-sub">${sub}</div>
+    <div class="result-tally">You got <strong>${score} of ${total}</strong> questions correct</div>
+    <div class="divider"></div>
+    <div class="topics-row"><span class="topic-badge a">Lease Agreements</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Landlord Obligations</span><span class="topic-badge d">Eviction Process</span></div>
+    <div class="result-nav"><button class="btn" onclick="restartFull()">← Restart Full Training</button><button class="btn primary" onclick="retakeQuiz()">Retake Quiz</button></div></div>`;
+}
+
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){
+  setProgress(current);
+  const slide=slides[current];
+  document.getElementById('content').innerHTML=slide.type==='learn'?renderLearn(slide,current):renderQuiz(slide,current);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+render();
+</script>
+</body>
+</html>

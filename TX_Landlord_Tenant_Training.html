@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --navy-mid: #2e3d7a; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4; --text: #1a1a18; --text-muted: #5a5a56;
+    --border: rgba(0,0,0,0.1); --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-track { height: 5px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--navy); border-radius: 3px; transition: width 0.4s ease; }
+  .section-eyebrow { font-size: 11px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+  .section-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; line-height: 1.25; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; margin-bottom: 0.85rem; }
+  .card.blue { border-left: 4px solid var(--blue); }
+  .card.teal { border-left: 4px solid var(--teal); }
+  .card.amber { border-left: 4px solid var(--amber); }
+  .card.red { border-left: 4px solid var(--red); }
+  .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+  .card.blue .card-label { color: var(--blue); }
+  .card.teal .card-label { color: var(--teal); }
+  .card.amber .card-label { color: var(--amber); }
+  .card.red .card-label { color: var(--red); }
+  .card p { font-size: 15px; color: var(--text-muted); }
+  .card ul { margin-top: 4px; padding-left: 1.1rem; }
+  .card ul li { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 22px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: var(--navy-mid); border-color: var(--navy-mid); }
+  .step-indicator { font-size: 13px; color: var(--text-muted); }
+  .quiz-q-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1rem; }
+  .q-number { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .q-text { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 1rem; line-height: 1.4; }
+  .quiz-opt { display: block; width: 100%; text-align: left; background: var(--gray-100); border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 7px; font-size: 14px; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .quiz-opt:hover { border-color: var(--navy); background: var(--blue-light); color: var(--blue-dark); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+  .quiz-opt:disabled { cursor: default; }
+  .feedback { font-size: 13.5px; padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 8px; line-height: 1.5; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border: 1px solid var(--red); }
+  .results-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; }
+  .score-ring-wrap { width: 110px; height: 110px; margin: 0 auto 1.25rem; position: relative; }
+  .score-ring-wrap svg { transform: rotate(-90deg); display: block; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .result-tally { display: inline-block; background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 20px; font-size: 14px; color: var(--text-muted); padding: 6px 18px; margin-bottom: 1.5rem; }
+  .result-tally strong { color: var(--navy); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 2rem; }
+  .topic-badge { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.5rem 0; }
+  .result-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .completion-banner { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .completion-banner .star { font-size: 28px; }
+  .completion-banner p { font-size: 14px; opacity: 0.85; margin-top: 2px; }
+  .completion-banner strong { font-size: 16px; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Texas Landlord-Tenant Law</h1>
+      <p>Staff Training &amp; Competency Check</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Your progress</span>
+      <span class="progress-count" id="prog-count">Step 1 of 6</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:16.6%"></div></div>
+  </div>
+  <div id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type: 'learn', label: 'Section 1 of 5', title: 'Texas Landlord-Tenant Law: The Basics',
+    cards: [
+      { accent: 'blue', key: 'Overview', text: 'U.S.VETS operates housing programs across multiple Texas sites. Understanding Texas landlord-tenant law helps staff protect veterans\' rights, support compliance, and respond effectively when housing issues arise.' },
+      { accent: 'teal', key: 'Landlord-friendly state', text: 'Texas is generally considered a landlord-friendly state. It does not have statewide rent control, and landlord rights are comparatively broad. That said, both landlords and tenants have clear legal protections that must be followed.' },
+      { accent: 'amber', key: 'Key sources of law', text: 'Texas landlord-tenant law is primarily governed by the Texas Property Code. Local ordinances in cities such as Austin, Houston, and Dallas may add additional requirements. Always verify whether local rules apply to a specific property.' },
+      { accent: 'red', key: 'Staff role', text: 'Case managers and housing staff may help veterans understand available resources and connect them with appropriate legal assistance when lease disputes arise. Staff should not provide legal advice or direct tenants on legal remedies without referring to qualified counsel.' }
+    ]
+  },
+  {
+    type: 'learn', label: 'Section 2 of 5', title: 'Lease Agreements & Fair Housing in Texas',
+    cards: [
+      { accent: 'blue', key: 'Written leases recommended', text: 'Texas does not require leases to be in writing for terms under one year, but written agreements are strongly recommended. They clearly document the terms both parties agreed to and are essential for resolving disputes.' },
+      { accent: 'teal', key: 'Required lease disclosures', list: ['Landlord\'s name and contact information (or authorized agent)', 'Whether the property is in a 100-year floodplain', 'Information about the property\'s utility cutoff switches', 'Notice if the unit is subject to any outstanding code violations or condemnation orders', 'Parking rules and towing authorization, if applicable'] },
+      { accent: 'amber', key: 'Fair housing requirements', text: 'Texas landlords must comply with the federal Fair Housing Act and the Texas Fair Housing Act. Discrimination based on race, color, national origin, religion, sex, familial status, or disability is prohibited. Violations can result in substantial civil penalties, damages, attorney fees, and other remedies.' },
+      { accent: 'red', key: 'Fair housing and veterans', text: 'Some Texas cities also prohibit discrimination based on source of income, which is important for veterans using housing vouchers. Staff should verify local protections when helping veterans secure housing in a specific city.' }
+    ]
+  },
+  {
+    type: 'learn', label: 'Section 3 of 5', title: 'Security Deposits in Texas',
+    cards: [
+      { accent: 'blue', key: 'No statutory cap', text: 'Texas does not set a maximum security deposit amount by state law. While one to two months\' rent is customary, a landlord can charge more. What the law strictly regulates is how and when the deposit must be returned.' },
+      { accent: 'teal', key: 'Return deadline', text: 'Texas landlords must return the security deposit within 30 days of the tenant vacating the property. If any deductions are made, an itemized written statement of deductions must be provided along with the remaining balance.' },
+      { accent: 'amber', key: 'Allowable deductions', text: 'Landlords may deduct for unpaid rent, damages beyond normal wear and tear, and costs explicitly authorized in the lease. Normal wear and tear is never a valid basis for deduction.' },
+      { accent: 'red', key: 'Penalties for noncompliance', text: 'If a landlord wrongfully withholds a security deposit in bad faith, the tenant may be entitled to three times the withheld amount plus reasonable attorney fees. This is a significant penalty designed to deter misuse of deposits.' }
+    ]
+  },
+  {
+    type: 'learn', label: 'Section 4 of 5', title: 'Landlord Obligations in Texas',
+    cards: [
+      { accent: 'blue', key: 'Habitability duty', text: 'Texas landlords are required to make diligent efforts to repair or remedy conditions that materially affect the health or safety of an ordinary tenant, after receiving proper written notice from the tenant.' },
+      { accent: 'teal', key: 'Repair timeline', text: 'Texas law generally requires repairs within a reasonable time after proper written notice, depending on the nature and severity of the condition. There is no single fixed statutory deadline — what is "reasonable" depends on the circumstances.' },
+      { accent: 'amber', key: 'Tenant remedies — use with caution', text: 'In limited circumstances and after following statutory notice requirements, tenants may have repair-and-remedy options under Texas law. Staff should encourage veterans to seek legal guidance before withholding rent or making repairs intended for reimbursement, as these remedies have strict procedural requirements.' },
+      { accent: 'red', key: 'Serious habitability failures', text: 'In some circumstances, serious and unaddressed habitability failures may allow a tenant to terminate the tenancy after following required legal procedures. This is a fact-specific legal determination — staff should refer veterans to legal assistance rather than advising them directly on this option.' }
+    ]
+  },
+  {
+    type: 'learn', label: 'Section 5 of 5', title: 'Eviction in Texas',
+    cards: [
+      { accent: 'blue', key: 'Notice to Vacate required first', text: 'Before filing an eviction lawsuit in Texas, a landlord must first serve the tenant with a written Notice to Vacate. The minimum notice period is 3 days unless the lease specifies a longer period. This notice must be delivered properly and must state the reason for eviction.' },
+      { accent: 'teal', key: 'Eviction process steps', list: ['Landlord serves a written Notice to Vacate (minimum 3 days)', 'If tenant does not comply, landlord files an eviction suit in Justice Court', 'A hearing is scheduled — typically within 10–21 days', 'If the court rules for the landlord, a Writ of Possession is issued', 'A constable enforces the Writ — this is the only lawful way to physically remove a tenant'] },
+      { accent: 'amber', key: 'Lockouts and self-help eviction', text: 'Texas has specific lockout procedures that landlords must follow. Landlords may not use lockouts, utility shutoffs, or property removal as unlawful self-help eviction methods outside the procedures authorized by Texas law. Any lockout performed outside those procedures — even when rent is owed — is illegal and exposes the landlord to liability.' },
+      { accent: 'red', key: 'What to do if a veteran faces an illegal lockout', text: 'If a veteran reports being locked out without a court order or proper procedure, staff should help them contact a tenant rights hotline or legal aid organization immediately. Texas law provides tenants with rapid remedies when illegal lockouts occur.' }
+    ]
+  },
+  {
+    type: 'quiz',
+    questions: [
+      {
+        q: 'Texas law sets a maximum security deposit amount that landlords may charge.',
+        opts: ['True — it is capped at one month\'s rent', 'True — it is capped at two months\' rent', 'False — Texas does not set a maximum security deposit amount', 'False — only local ordinances set deposit limits'],
+        correct: 2,
+        feedbackRight: 'Correct. Texas does not cap security deposits by state statute. While one to two months\' rent is customary, landlords can charge more. The law focuses on how and when the deposit must be returned.',
+        feedbackWrong: 'Not quite. Texas does not set a maximum security deposit amount by statute. What the law regulates is the timeline and process for returning the deposit.'
+      },
+      {
+        q: 'How long does a Texas landlord have to return a security deposit after a tenant moves out?',
+        opts: ['14 days', '21 days', '30 days', '45 days'],
+        correct: 2,
+        feedbackRight: 'Correct! Texas law requires landlords to return the security deposit within 30 days of the tenant vacating. Any deductions must be accompanied by an itemized written statement.',
+        feedbackWrong: 'Not quite. Texas gives landlords 30 days to return the security deposit after the tenant vacates, along with an itemized statement of any deductions.'
+      },
+      {
+        q: 'A veteran reports their landlord changed their locks after they were two weeks late on rent, with no court order. What should staff know about this situation?',
+        opts: ['This is always legal in Texas if rent is more than 10 days late', 'This may or may not be legal depending on whether the landlord followed Texas statutory lockout procedures', 'This is always legal because the landlord owns the property', 'Landlords in Texas may never change locks for any reason'],
+        correct: 1,
+        feedbackRight: 'Correct. Texas has specific statutory lockout procedures. Lockouts performed outside those authorized procedures are illegal even when rent is owed. Staff should help the veteran contact legal aid immediately if proper procedures were not followed.',
+        feedbackWrong: 'Not quite. Texas has specific lockout procedures — lockouts outside those procedures are illegal regardless of unpaid rent. But not all lockouts are automatically illegal. Staff should help the veteran seek legal assistance to assess the specific situation.'
+      },
+      {
+        q: 'Texas law sets a specific number of days — such as 7 days — as the legal deadline for all landlord repairs.',
+        opts: ['True — 7 days is the statutory repair deadline for all issues', 'True — but only for urgent habitability issues', 'False — Texas law requires repairs within a reasonable time depending on the nature and severity of the condition', 'False — Texas has no repair requirements for landlords'],
+        correct: 2,
+        feedbackRight: 'Correct. Texas law requires repairs within a reasonable time after proper written notice. There is no single fixed statutory deadline — what is "reasonable" depends on the nature and urgency of the condition.',
+        feedbackWrong: 'Not quite. Texas does not set a fixed number of days for all repairs. The standard is a "reasonable time" after proper written notice, which varies based on the nature and severity of the condition.'
+      },
+      {
+        q: 'Before filing an eviction lawsuit in Texas, what must a landlord do first?',
+        opts: ['Nothing — they can file in court immediately', 'Serve the tenant a written Notice to Vacate (minimum 3 days)', 'Wait 30 days after the last rent payment', 'Obtain approval from the county housing authority'],
+        correct: 1,
+        feedbackRight: 'Correct! Before filing an eviction suit, Texas landlords must first serve the tenant a written Notice to Vacate with a minimum of 3 days notice (unless the lease specifies a longer period).',
+        feedbackWrong: 'Not quite. Texas landlords must first serve a written Notice to Vacate — with a minimum of 3 days notice — before they can file an eviction lawsuit in Justice Court.'
+      },
+      {
+        q: 'What is the only lawful way to physically remove a tenant from a rental property in Texas?',
+        opts: ['The landlord can personally remove the tenant after the Notice to Vacate period expires', 'The landlord can hire a moving company to remove the tenant\'s belongings', 'A constable enforces a court-issued Writ of Possession', 'Local police can remove a tenant at the landlord\'s request without a court order'],
+        correct: 2,
+        feedbackRight: 'Correct! The only lawful physical removal process in Texas is a constable enforcing a court-issued Writ of Possession after the landlord has won an eviction case in Justice Court.',
+        feedbackWrong: 'Not quite. Physical removal of a tenant in Texas must be carried out by a constable enforcing a court-issued Writ of Possession. Any other method is an illegal self-help eviction.'
+      },
+      {
+        q: 'What is the best role for U.S.VETS staff when a veteran is dealing with a lease dispute or potential legal remedy?',
+        opts: ['Advise the veteran directly on which legal remedy to pursue', 'Help the veteran understand available resources and connect them with appropriate legal assistance', 'Negotiate directly with the landlord on the veteran\'s behalf without legal guidance', 'Tell the veteran to withhold rent until the issue is resolved'],
+        correct: 1,
+        feedbackRight: 'Correct. Staff should help veterans understand their options and connect them with legal assistance. Advising veterans to pursue specific legal remedies — such as withholding rent or invoking repair-and-deduct — without legal guidance creates risk for both the veteran and U.S.VETS.',
+        feedbackWrong: 'Not quite. The appropriate staff role is to help veterans understand available resources and connect them with qualified legal assistance. Advising directly on legal remedies is outside the staff role and creates organizational risk.'
+      }
+    ]
+  }
+];
+
+let current = 0, answers = [], answered = [], score = 0;
+
+function setProgress(idx) {
+  const t = slides.length, p = Math.round(((idx + 1) / t) * 100);
+  document.getElementById('prog-fill').style.width = p + '%';
+  document.getElementById('prog-count').textContent = 'Step ' + (idx + 1) + ' of ' + t;
+}
+
+function renderLearn(s, idx) {
+  const c = s.cards.map(c => {
+    const b = c.list ? `<ul>${c.list.map(i => `<li>${i}</li>`).join('')}</ul>` : `<p>${c.text}</p>`;
+    return `<div class="card ${c.accent}"><div class="card-label">${c.key}</div>${b}</div>`;
+  }).join('');
+  const ib = idx === slides.length - 2;
+  return `<div class="section-eyebrow">${s.label}</div><div class="section-title">${s.title}</div>${c}<div class="nav-row"><button class="btn" onclick="go(${idx - 1})" ${idx === 0 ? 'disabled' : ''}>← Back</button><span class="step-indicator">${idx + 1} / ${slides.length}</span><button class="btn primary" onclick="go(${idx + 1})">${ib ? 'Take the Quiz →' : 'Next →'}</button></div>`;
+}
+
+function renderQuiz(s, idx) {
+  const qc = s.questions.length, dc = answered.filter(a => a !== undefined).length, ad = dc === qc;
+  let h = `<div class="section-eyebrow">Section 6 of 6</div><div class="section-title">Knowledge Check</div>`;
+  s.questions.forEach((q, qi) => {
+    const ia = answered[qi] !== undefined, sel = answers[qi];
+    const oh = q.opts.map((o, oi) => {
+      let c = 'quiz-opt';
+      if (ia && oi === q.correct) c += ' correct';
+      else if (ia && oi === sel && oi !== q.correct) c += ' wrong';
+      return `<button class="${c}" onclick="answer(${qi},${oi})" ${ia ? 'disabled' : ''}>${o}</button>`;
+    }).join('');
+    const fh = ia ? `<div class="feedback ${sel === q.correct ? 'correct' : 'wrong'}">${sel === q.correct ? '✓ ' + q.feedbackRight : '✗ ' + q.feedbackWrong}</div>` : '';
+    h += `<div class="quiz-q-card"><div class="q-number">Question ${qi + 1} of ${qc}</div><div class="q-text">${q.q}</div>${oh}${fh}</div>`;
+  });
+  h += `<div class="nav-row"><button class="btn" onclick="go(${idx - 1})">← Back to review</button><span class="step-indicator">${dc} of ${qc} answered</span><button class="btn primary" onclick="showResults()" ${ad ? '' : 'disabled'}>See my results →</button></div>`;
+  return h;
+}
+
+function renderResults() {
+  const t = slides[slides.length - 1].questions.length, p = Math.round((score / t) * 100);
+  const c = 2 * Math.PI * 48, d = (p / 100) * c;
+  const rc = p >= 80 ? '#0F6E56' : p >= 60 ? '#BA7517' : '#A32D2D';
+  const hl = p >= 80 ? 'Well done!' : p >= 60 ? 'Good effort!' : 'Keep studying!';
+  const sub = p >= 80 ? 'You have a solid grasp of Texas landlord-tenant law.' : p >= 60 ? 'Review the sections where you missed questions, then retake the quiz.' : 'Go back through the training slides before retaking the quiz.';
+  document.getElementById('prog-fill').style.width = '100%';
+  document.getElementById('prog-count').textContent = 'Complete';
+  return `<div class="results-wrap">${p === 100 ? '<div class="completion-banner"><span class="star">⭐</span><div><strong>Perfect score!</strong><p>You answered every question correctly.</p></div></div>' : ''}<div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${rc}" stroke-width="9" stroke-dasharray="${d.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round"/></svg><div class="score-num">${p}%</div></div><div class="result-headline">${hl}</div><div class="result-sub">${sub}</div><div class="result-tally">You got <strong>${score} of ${t}</strong> questions correct</div><div class="divider"></div><div class="topics-row"><span class="topic-badge a">Lease Agreements</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Repairs & Habitability</span><span class="topic-badge d">Eviction Process</span></div><div class="result-nav"><button class="btn" onclick="restartFull()">← Restart full training</button><button class="btn primary" onclick="retakeQuiz()">Retake quiz</button></div></div>`;
+}
+
+function answer(qi, oi) {
+  if (answered[qi] !== undefined) return;
+  answers[qi] = oi; answered[qi] = oi;
+  if (oi === slides[slides.length - 1].questions[qi].correct) score++;
+  render();
+}
+function showResults() { document.getElementById('content').innerHTML = renderResults(); }
+function retakeQuiz() { answers = []; answered = []; score = 0; current = slides.length - 1; render(); }
+function restartFull() { answers = []; answered = []; score = 0; current = 0; render(); }
+function go(n) { if (n < 0 || n >= slides.length) return; current = n; render(); }
+function render() {
+  setProgress(current);
+  const s = slides[current];
+  document.getElementById('content').innerHTML = s.type === 'learn' ? renderLearn(s, current) : renderQuiz(s, current);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+render();
+</script>
+</body>
+</html>

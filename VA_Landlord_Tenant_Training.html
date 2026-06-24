@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virginia Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4;
+    --text: #1a1a18; --text-muted: #5a5a56;
+    --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-bar { height: 5px; background: var(--gray-200); border-radius: 99px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 99px; transition: width 0.35s ease; }
+  .card { background: #fff; border-radius: var(--radius); box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); overflow: hidden; }
+  .card-header { padding: 1.5rem 2rem 1.25rem; border-bottom: 1px solid var(--gray-200); }
+  .slide-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+  .slide-title { font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+  .card-body { padding: 1.75rem 2rem; }
+  .intro-text { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.65; }
+  .section-block { margin-bottom: 1.5rem; }
+  .section-block:last-child { margin-bottom: 0; }
+  .section-heading { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .callout { border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+  .callout-body { flex: 1; }
+  .callout-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .callout-text { font-size: 14px; line-height: 1.55; }
+  .callout.blue { background: var(--blue-light); } .callout.blue .callout-title { color: var(--blue-dark); } .callout.blue .callout-text { color: #1a3a5e; }
+  .callout.teal { background: var(--teal-light); } .callout.teal .callout-title { color: var(--teal-dark); } .callout.teal .callout-text { color: #0a3326; }
+  .callout.amber { background: var(--amber-light); } .callout.amber .callout-title { color: var(--amber-dark); } .callout.amber .callout-text { color: #4a2e00; }
+  .callout.red { background: var(--red-light); } .callout.red .callout-title { color: var(--red-dark); } .callout.red .callout-text { color: #3d1010; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .detail-item { background: var(--gray-100); border-radius: var(--radius-sm); padding: 12px 14px; }
+  .detail-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+  .detail-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .detail-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .list-items { list-style: none; }
+  .list-items li { font-size: 14px; padding: 7px 0; border-bottom: 1px solid var(--gray-200); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+  .list-items li:last-child { border-bottom: none; }
+  .list-items li::before { content: '•'; color: var(--navy); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .card-nav { padding: 1.25rem 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: center; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 20px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: #16204a; }
+  .btn:disabled { opacity: 0.4; cursor: default; }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.25rem 0; }
+  .question-text { font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 1.25rem; }
+  .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.25rem; }
+  .option { border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 13px 16px; font-size: 14px; cursor: pointer; transition: all 0.15s; background: #fff; text-align: left; width: 100%; display: flex; align-items: center; gap: 12px; }
+  .option:hover:not(:disabled) { border-color: var(--navy); background: #f0f3fa; }
+  .option .opt-letter { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; color: var(--text-muted); }
+  .option.correct { border-color: var(--teal); background: var(--teal-light); } .option.correct .opt-letter { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .option.wrong { border-color: var(--red); background: var(--red-light); } .option.wrong .opt-letter { background: var(--red); border-color: var(--red); color: #fff; }
+  .feedback { border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.55; margin-bottom: 1rem; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border-left: 3px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border-left: 3px solid var(--red); }
+  .quiz-progress { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .results-wrap { padding: 2rem; text-align: center; }
+  .score-ring-wrap { position: relative; display: inline-block; margin: 1rem auto; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 22px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .result-tally { font-size: 14px; color: var(--text-muted); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 1rem 0; }
+  .topic-badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .result-nav { display: flex; gap: 10px; justify-content: center; margin-top: 1.25rem; }
+  @media (max-width: 600px) {
+    .header-inner { padding: 1.25rem; } .main { padding: 1.25rem 1rem 3rem; }
+    .card-header, .card-body, .card-nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .detail-grid { grid-template-columns: 1fr; } .results-wrap { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Virginia Landlord-Tenant Law</h1>
+      <p>Staff Training Module &mdash; Property & Housing Programs</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Progress</span>
+      <span class="progress-count" id="prog-count">Slide 1 of 6</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:16.7%"></div></div>
+  </div>
+  <div class="card" id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type: 'learn', label: 'Overview', title: 'Virginia Landlord-Tenant Law: The Basics',
+    intro: 'Virginia\'s landlord-tenant law is governed by the Virginia Residential Landlord Tenant Act (VRLTA). It sets clear duties for both landlords and tenants and provides meaningful protections — especially important for U.S.VETS staff working with veterans in Virginia housing programs.',
+    sections: [
+      {
+        heading: 'Key Facts at a Glance', type: 'grid',
+        items: [
+          { label: 'Security Deposit Cap', value: '2 months\' rent', sub: 'Maximum allowed by VRLTA' },
+          { label: 'Deposit Return Deadline', value: '45 days', sub: 'After tenant vacates' },
+          { label: 'Application Fee Cap', value: '$50', sub: 'Nonrefundable screening fee limit (verify current amount)' },
+          { label: 'Entry Notice', value: '24 hours', sub: 'Required before landlord entry' },
+          { label: 'Eviction Notice (Nonpayment)', value: '5 days', sub: 'Pay-or-quit notice period' },
+          { label: 'Mandatory Disclosures', value: 'Numerous', sub: 'Vary by property type and circumstances' }
+        ]
+      },
+      {
+        heading: 'Why This Matters for U.S.VETS', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '🏠', title: 'Housing program staff', text: 'Virginia requires numerous landlord disclosures, some of which apply only under specific circumstances. Staff should know what landlords are required to tell tenants at move-in.' },
+          { type: 'teal', icon: '⚖️', title: 'Case managers', text: 'The 24-hour entry notice rule and strong retaliation protections give veterans meaningful rights that staff can help them enforce.' },
+          { type: 'amber', icon: '📋', title: 'Property liaisons', text: 'Must verify that partner landlords are providing required disclosures at lease signing and following proper deposit and entry procedures.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Lease Agreements', title: 'Virginia Lease Agreements (VRLTA)',
+    intro: 'Under the Virginia Residential Landlord Tenant Act, landlords should provide tenants with a written lease. When no written lease exists, Virginia law supplies certain default terms governing the tenancy.',
+    sections: [
+      {
+        heading: 'Lease Types', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '📄', title: 'Fixed-term lease', text: 'Has a specific start and end date. At expiration, it may be renewed or terminated. Fixed-term leases do not auto-renew unless the lease explicitly says so.' },
+          { type: 'teal', icon: '🔄', title: 'Month-to-month / week-to-week', text: 'Periodic leases renew automatically until one party terminates. Notice to end a month-to-month lease is typically 30 days.' },
+          { type: 'amber', icon: '📋', title: 'No written lease', text: 'When no written lease exists, Virginia law supplies certain default terms governing the tenancy. This ensures that the VRLTA still applies even in informal arrangements.' }
+        ]
+      },
+      {
+        heading: 'Virginia\'s Landlord Disclosure Requirements', type: 'callouts',
+        items: [
+          { type: 'red', icon: '📋', title: 'Extensive disclosure requirements', text: 'Virginia requires numerous landlord disclosures, some of which apply only under specific circumstances. Common disclosures include: landlord name and contact, move-in inspection opportunity, security deposit terms, lead-based paint, mold, fee disclosure, shared utilities, electronic notices, methamphetamine contamination, military air zone, defective drywall, demolition/displacement notice, and statement of acceptance of rent with reservation.' },
+          { type: 'amber', icon: '⚠️', title: 'Consequences of missing disclosures', text: 'Failing to provide required disclosures can allow a tenant to terminate the lease prematurely and expose the landlord to civil liability.' }
+        ]
+      },
+      {
+        heading: 'Prohibited Lease Provisions', type: 'list',
+        items: [
+          'Waiving the landlord\'s duty to maintain habitable conditions',
+          'Limiting a tenant\'s right to pursue legal remedies',
+          'Requiring tenants to pay attorney fees if the landlord wins a suit (unless mutual)',
+          'Authorizing landlord entry without proper notice'
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Security Deposits', title: 'Security Deposits in Virginia',
+    intro: 'Virginia\'s VRLTA sets clear rules on how security deposits are collected, held, and returned. If a landlord chooses to collect a security deposit, Virginia law limits the amount and regulates how it is handled.',
+    sections: [
+      {
+        heading: 'Deposit Rules at a Glance', type: 'grid',
+        items: [
+          { label: 'Maximum Amount', value: '2 months\' rent', sub: 'Hard cap under VRLTA' },
+          { label: 'Return Deadline', value: '45 days', sub: 'After tenant vacates' },
+          { label: 'Itemized List', value: 'Required', sub: 'For any deductions made' },
+          { label: 'Move-In Inspection', value: 'Recommended', sub: 'Helps establish baseline condition' }
+        ]
+      },
+      {
+        heading: 'Allowable Deductions', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '💰', title: 'Unpaid rent', text: 'Any rent owed at the time of move-out may be deducted from the security deposit.' },
+          { type: 'amber', icon: '🔨', title: 'Damage beyond normal wear and tear', text: 'Landlords may deduct for damage exceeding ordinary use. Normal wear — faded paint, small nail holes, worn carpet from use — is not deductible.' },
+          { type: 'teal', icon: '🧹', title: 'Cleaning and repair costs', text: 'Costs to restore the unit to its original condition (beyond ordinary wear) may be deducted, provided they are itemized in writing.' }
+        ]
+      },
+      {
+        heading: 'Landlord Penalties for Non-Compliance', type: 'callouts',
+        items: [
+          { type: 'red', icon: '⚖️', title: 'Wrongful withholding', text: 'If a landlord fails to return the deposit or provide an itemized list within 45 days, the tenant may sue. Courts may award the tenant the deposit amount plus damages and attorney fees.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Landlord Obligations', title: 'Landlord Obligations & Tenant Rights',
+    intro: 'Virginia\'s VRLTA places real duties on landlords to maintain properties and respect tenant rights. Tenants have enforceable remedies when those duties aren\'t met.',
+    sections: [
+      {
+        heading: 'Habitability Requirements', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '🏗️', title: 'Safe and habitable conditions', text: 'Landlords must maintain rental units in safe, habitable condition — including working heat, plumbing, electrical systems, and structural integrity. This duty cannot be waived in the lease.' },
+          { type: 'blue', icon: '🔧', title: 'Repair obligations', text: 'After written notice from a tenant, landlords must make repairs within a reasonable time. For emergency repairs affecting health or safety, action is expected promptly.' },
+          { type: 'amber', icon: '🚪', title: 'Right of entry — 24-hour notice required', text: 'Virginia law requires landlords to give at least 24 hours\' notice before entering a rental unit for non-emergency purposes. Entry must occur at a reasonable time.' }
+        ]
+      },
+      {
+        heading: 'Tenant Rights and Responsibilities', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '✅', title: 'Tenant rights under VRLTA', text: 'Tenants have the right to a habitable unit, privacy, timely repairs, return of their deposit, and to receive all required disclosures. They may also receive unused portions of their security deposit after moving out.' },
+          { type: 'blue', icon: '📋', title: 'Tenant responsibilities', text: 'Tenants must pay rent on time, maintain the unit in a clean and habitable condition, allow reasonable landlord entry, pay late fees for delayed rent, and adhere to all lease terms.' }
+        ]
+      },
+      {
+        heading: 'Fair Housing and Retaliation', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '⚖️', title: 'Federal and state fair housing protections', text: 'Virginia enforces federal Fair Housing Act protections against discrimination based on race, color, religion, sex, national origin, familial status, and disability. Violations may result in substantial civil penalties, damages, attorney fees, and other remedies.' },
+          { type: 'red', icon: '🚫', title: 'Retaliation is prohibited', text: 'Landlords cannot evict, raise rent, or reduce services because a tenant exercised a legal right, filed a complaint, or contacted a housing authority. Retaliation is a separate legal violation under the VRLTA.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Eviction Process', title: 'Eviction Law in Virginia',
+    intro: 'Virginia landlords may evict tenants for nonpayment of rent, lease violations, or illegal activity. The VRLTA requires a formal legal process — self-help evictions are strictly prohibited.',
+    sections: [
+      {
+        heading: 'Lawful Grounds for Eviction', type: 'list',
+        items: [
+          'Nonpayment of rent',
+          'Violation of lease terms',
+          'Illegal activity on the premises',
+          'End of lease term (holdover tenants)',
+          'Material non-compliance with VRLTA obligations'
+        ]
+      },
+      {
+        heading: 'The Eviction Timeline', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '1️⃣', title: 'Step 1: Written Notice', text: 'For nonpayment of rent, the landlord must give a 5-day pay-or-quit notice. For other lease violations, a 30-day notice to cure or vacate is typically required.' },
+          { type: 'amber', icon: '2️⃣', title: 'Step 2: Unlawful Detainer Lawsuit', text: 'If the tenant does not comply, the landlord files an unlawful detainer lawsuit in General District Court. The court schedules a hearing, typically within a few weeks.' },
+          { type: 'teal', icon: '3️⃣', title: 'Step 3: Court Hearing', text: 'Both parties present their case. If the landlord prevails, the court issues an order of possession. The tenant has a brief window to appeal.' },
+          { type: 'red', icon: '4️⃣', title: 'Step 4: Writ of Eviction', text: 'If the tenant still does not vacate, the landlord requests a Writ of Eviction. A sheriff enforces the removal — the only lawful means of physically removing a tenant.' }
+        ]
+      },
+      {
+        heading: 'Self-Help Evictions Are Illegal', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'No lock-outs, utility shutoffs, or removal of belongings', text: 'Virginia law prohibits landlords from changing locks, removing doors, shutting off utilities, or removing tenant belongings to force someone out. These actions are illegal regardless of how much rent is owed, and expose the landlord to significant liability.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'quiz', label: 'Knowledge Check', title: 'Virginia Law: Knowledge Check',
+    questions: [
+      {
+        text: 'What is the maximum security deposit a Virginia landlord may charge under the VRLTA?',
+        options: ['One month\'s rent', 'Two months\' rent', 'Three months\' rent', 'There is no cap in Virginia'],
+        correct: 1,
+        feedback: 'Virginia\'s VRLTA caps security deposits at two months\' rent. This is a hard limit — landlords cannot charge more regardless of what the lease says.'
+      },
+      {
+        text: 'How much advance notice must a Virginia landlord give before entering a tenant\'s unit for a non-emergency?',
+        options: ['No notice required', '12 hours', '24 hours', '48 hours'],
+        correct: 2,
+        feedback: 'Virginia law requires landlords to give at least 24 hours\' notice before entering a rental unit for non-emergency purposes. Entry must also occur at a reasonable time.'
+      },
+      {
+        text: 'A veteran hasn\'t paid rent. The landlord wants to begin the eviction process. What is the required notice period before filing for eviction?',
+        options: ['3 days', '5 days', '10 days', '30 days'],
+        correct: 1,
+        feedback: 'For nonpayment of rent, Virginia landlords must give a 5-day pay-or-quit notice before filing an unlawful detainer lawsuit. For other lease violations, the notice period is typically 30 days.'
+      },
+      {
+        text: 'Which best describes Virginia\'s approach to landlord disclosure requirements?',
+        options: ['Virginia has no mandatory disclosure requirements', 'Virginia requires a small set of universal disclosures that apply to every tenancy', 'Virginia requires numerous disclosures, some of which apply only under specific circumstances', 'Virginia requires disclosures only for commercial leases'],
+        correct: 2,
+        feedback: 'Virginia requires numerous landlord disclosures, some of which apply only under specific circumstances such as property type, condition, or location. Common examples include lead-based paint, mold, fee disclosures, shared utilities, meth contamination history, military air zone proximity, and more. Failing to provide required disclosures can allow tenants to terminate the lease and pursue civil remedies.'
+      },
+      {
+        text: 'If a Virginia landlord does not provide a written lease, what happens?',
+        options: [
+          'The tenancy is considered illegal and the tenant must vacate',
+          'Virginia law supplies certain default terms governing the tenancy',
+          'The tenancy defaults to month-to-month with no lease protections',
+          'The landlord loses all rights to collect rent'
+        ],
+        correct: 1,
+        feedback: 'When no written lease exists, Virginia law supplies certain default terms governing the tenancy. This ensures that the VRLTA still applies and tenants retain their legal protections even in informal arrangements.'
+      },
+      {
+        text: 'A veteran reports that their landlord changed the door locks while they were out because they were late on rent. What is this, and is it legal in Virginia?',
+        options: [
+          'A legal remedy if rent is more than 5 days overdue',
+          'A legal remedy if specified in the lease',
+          'An illegal self-help eviction',
+          'Legal only if the landlord provides written notice first'
+        ],
+        correct: 2,
+        feedback: 'This is an illegal self-help eviction. Regardless of how much rent is owed, Virginia landlords must use the formal court process. Changing locks, removing doors, cutting utilities, or removing belongings are all prohibited — and expose the landlord to serious liability.'
+      },
+      {
+        text: 'What can Virginia landlords NOT discriminate against tenants for, under fair housing law?',
+        options: [
+          'A tenant\'s preference for a particular floor level',
+          'Race, color, religion, sex, national origin, familial status, or disability',
+          'A tenant\'s choice of employer',
+          'A tenant having multiple vehicles'
+        ],
+        correct: 1,
+        feedback: 'Virginia enforces the federal Fair Housing Act\'s protected classes: race, color, religion, sex, national origin, familial status, and disability. Fair housing violations in Virginia may result in substantial civil penalties, damages, attorney fees, and other remedies.'
+      }
+    ]
+  }
+];
+
+let current = 0, answers = [], answered = [], score = 0;
+
+function setProgress(idx) {
+  document.getElementById('prog-fill').style.width = ((idx+1)/slides.length*100)+'%';
+  document.getElementById('prog-count').textContent = idx < slides.length-1 ? 'Slide '+(idx+1)+' of '+(slides.length-1) : 'Knowledge Check';
+}
+
+function renderLearn(slide, idx) {
+  let sectionsHtml = '';
+  for (const sec of slide.sections) {
+    let inner = '';
+    if (sec.type==='grid') inner = '<div class="detail-grid">'+sec.items.map(i=>`<div class="detail-item"><div class="detail-label">${i.label}</div><div class="detail-value">${i.value}</div>${i.sub?`<div class="detail-sub">${i.sub}</div>`:''}</div>`).join('')+'</div>';
+    else if (sec.type==='callouts') inner = sec.items.map(i=>`<div class="callout ${i.type}"><div class="callout-icon">${i.icon}</div><div class="callout-body"><div class="callout-title">${i.title}</div><div class="callout-text">${i.text}</div></div></div>`).join('');
+    else if (sec.type==='list') inner = '<ul class="list-items">'+sec.items.map(i=>`<li>${i}</li>`).join('')+'</ul>';
+    sectionsHtml += `<div class="section-block"><div class="section-heading">${sec.heading}</div>${inner}</div>`;
+  }
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${slide.intro?`<p class="intro-text">${slide.intro}</p>`:''}${sectionsHtml}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><button class="btn primary" onclick="go(${idx+1})">${idx===slides.length-2?'Take the Quiz →':'Next →'}</button></div>`;
+}
+
+function renderQuiz(slide, idx) {
+  const allAnswered = slide.questions.every((_,qi)=>answered[qi]!==undefined);
+  let qHtml = slide.questions.map((q,qi)=>{
+    const ua=answered[qi];
+    const opts=q.options.map((opt,oi)=>{
+      let cls='option';
+      if(ua!==undefined){if(oi===q.correct)cls+=' correct';else if(oi===ua)cls+=' wrong';}
+      return `<button class="${cls}" onclick="answer(${qi},${oi})" ${ua!==undefined?'disabled':''}><span class="opt-letter">${['A','B','C','D'][oi]}</span><span>${opt}</span></button>`;
+    }).join('');
+    const fb=ua!==undefined?`<div class="feedback ${ua===q.correct?'correct':'wrong'}">${ua===q.correct?'✅ ':'❌ '}${q.feedback}</div>`:'';
+    return `<div style="margin-bottom:2rem;padding-bottom:${qi<slide.questions.length-1?'2rem':'0'};border-bottom:${qi<slide.questions.length-1?'1px solid var(--gray-200)':'none'}"><div class="quiz-progress">Question ${qi+1} of ${slide.questions.length}</div><div class="question-text">${q.text}</div><div class="options">${opts}</div>${fb}</div>`;
+  }).join('');
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${qHtml}${allAnswered?`<div style="text-align:center;margin-top:1rem"><button class="btn primary" onclick="showResults()">See My Results →</button></div>`:''}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})">← Back to Training</button><span style="font-size:13px;color:var(--text-muted)">${Object.keys(answered).length} of ${slide.questions.length} answered</span></div>`;
+}
+
+function renderResults() {
+  const total=slides[slides.length-1].questions.length, pct=Math.round((score/total)*100);
+  const c=2*Math.PI*48, dash=(pct/100)*c;
+  const ringColor=pct>=80?'#0F6E56':pct>=60?'#BA7517':'#A32D2D';
+  const headline=pct>=80?'Well done!':pct>=60?'Good effort!':'Keep studying!';
+  const sub=pct>=80?'You have a solid grasp of Virginia landlord-tenant law.':pct>=60?'Review the sections where you missed questions, then retake.':'Go back through the training slides before retaking the quiz.';
+  document.getElementById('prog-fill').style.width='100%';
+  document.getElementById('prog-count').textContent='Complete';
+  return `<div class="results-wrap"><div class="slide-label" style="text-align:center;margin-bottom:0.5rem">Quiz Complete</div>
+    <div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${ringColor}" stroke-width="9" stroke-dasharray="${dash.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 55 55)"/></svg><div class="score-num">${pct}%</div></div>
+    <div class="result-headline">${headline}</div><div class="result-sub">${sub}</div>
+    <div class="result-tally">You got <strong>${score} of ${total}</strong> questions correct</div>
+    <div class="divider"></div>
+    <div class="topics-row"><span class="topic-badge a">Lease Agreements</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Landlord Obligations</span><span class="topic-badge d">Eviction Process</span></div>
+    <div class="result-nav"><button class="btn" onclick="restartFull()">← Restart Full Training</button><button class="btn primary" onclick="retakeQuiz()">Retake Quiz</button></div></div>`;
+}
+
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){
+  setProgress(current);
+  const slide=slides[current];
+  document.getElementById('content').innerHTML=slide.type==='learn'?renderLearn(slide,current):renderQuiz(slide,current);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+render();
+</script>
+</body>
+</html>

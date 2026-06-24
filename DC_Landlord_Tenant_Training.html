@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Washington D.C. Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --navy-mid: #2e3d7a; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4; --text: #1a1a18; --text-muted: #5a5a56;
+    --border: rgba(0,0,0,0.1); --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-track { height: 5px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--navy); border-radius: 3px; transition: width 0.4s ease; }
+  .section-eyebrow { font-size: 11px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+  .section-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; line-height: 1.25; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; margin-bottom: 0.85rem; }
+  .card.blue { border-left: 4px solid var(--blue); }
+  .card.teal { border-left: 4px solid var(--teal); }
+  .card.amber { border-left: 4px solid var(--amber); }
+  .card.red { border-left: 4px solid var(--red); }
+  .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+  .card.blue .card-label { color: var(--blue); }
+  .card.teal .card-label { color: var(--teal); }
+  .card.amber .card-label { color: var(--amber); }
+  .card.red .card-label { color: var(--red); }
+  .card p { font-size: 15px; color: var(--text-muted); }
+  .card ul { margin-top: 4px; padding-left: 1.1rem; }
+  .card ul li { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 22px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: var(--navy-mid); border-color: var(--navy-mid); }
+  .step-indicator { font-size: 13px; color: var(--text-muted); }
+  .quiz-q-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1rem; }
+  .q-number { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .q-text { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 1rem; line-height: 1.4; }
+  .quiz-opt { display: block; width: 100%; text-align: left; background: var(--gray-100); border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 7px; font-size: 14px; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .quiz-opt:hover { border-color: var(--navy); background: var(--blue-light); color: var(--blue-dark); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+  .quiz-opt:disabled { cursor: default; }
+  .feedback { font-size: 13.5px; padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 8px; line-height: 1.5; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border: 1px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border: 1px solid var(--red); }
+  .results-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; }
+  .score-ring-wrap { width: 110px; height: 110px; margin: 0 auto 1.25rem; position: relative; }
+  .score-ring-wrap svg { transform: rotate(-90deg); display: block; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .result-tally { display: inline-block; background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 20px; font-size: 14px; color: var(--text-muted); padding: 6px 18px; margin-bottom: 1.5rem; }
+  .result-tally strong { color: var(--navy); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 2rem; }
+  .topic-badge { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.5rem 0; }
+  .result-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .completion-banner { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .completion-banner .star { font-size: 28px; }
+  .completion-banner p { font-size: 14px; opacity: 0.85; margin-top: 2px; }
+  .completion-banner strong { font-size: 16px; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Washington D.C. Landlord-Tenant Law</h1>
+      <p>Staff Training &amp; Competency Check</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Your progress</span>
+      <span class="progress-count" id="prog-count">Step 1 of 6</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:16.6%"></div></div>
+  </div>
+  <div id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type:'learn', label:'Section 1 of 5', title:'Security Deposits in D.C.',
+    cards:[
+      {accent:'blue', key:'Deposit cap', text:'Washington D.C. limits security deposits to one month\'s rent — stricter than many states. Charging more than this is a violation of D.C. law.'},
+      {accent:'teal', key:'Return timeline', text:'Landlords must return the security deposit within 45 days of the tenant moving out. This is significantly longer than some states but is a firm deadline in D.C.'},
+      {accent:'amber', key:'Deductions', text:'Landlords may only deduct for damages beyond normal wear and tear and unpaid rent. Any deductions must be itemized and documented in writing.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 2 of 5', title:'Rent Increases in D.C.',
+    cards:[
+      {accent:'blue', key:'Rent control applies to many units', text:'Many, but not all, rental properties in Washington D.C. are subject to rent control. Allowable annual increases are established by D.C. law and are generally tied to inflation, with specific limits, exemptions, and special rules for certain tenants including elderly and disabled residents. Do not assume all D.C. properties are covered.'},
+      {accent:'teal', key:'Key exemptions exist', text:'Certain newer buildings and other property categories may be exempt from D.C. rent control. Always verify whether a specific property is covered before advising veterans on their rights regarding rent increases.'},
+      {accent:'amber', key:'Why this matters for U.S.VETS', text:'When rent control applies, it provides important protections for veterans in D.C. housing. Staff should check whether a specific property is covered when coordinating housing agreements, as rights and limits vary significantly depending on the building.'},
+      {accent:'red', key:'Not landlord-friendly', text:'D.C. is not considered a landlord-friendly jurisdiction specifically because of its rent control laws. This means stronger protections for our veteran tenants.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 3 of 5', title:'Landlord Entry & Repairs',
+    cards:[
+      {accent:'blue', key:'Notice required', text:'Washington D.C. requires landlords to provide 48-hour advance notice before entering a rental property for non-emergency reasons. This is more notice than most states require.'},
+      {accent:'teal', key:'Repair obligations', text:'It is the landlord\'s responsibility to keep the rental in safe and healthy living conditions. Repairs must be made within a reasonable time after the tenant provides notice.'},
+      {accent:'amber', key:'Tenant remedies for non-repair', text:'When landlords fail to make required repairs, D.C. tenants may have significant legal remedies available through D.C. housing agencies and the courts. Staff should refer veterans to legal assistance when significant repair disputes arise rather than advising them directly on withholding rent or other legal actions.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 4 of 5', title:'Tenant Responsibilities in D.C.',
+    cards:[
+      {accent:'blue', key:'Rent payment and nonpayment', text:'D.C. has specific notice and filing requirements that apply before a landlord may pursue eviction for nonpayment of rent. These rules have evolved significantly, including through COVID-era reforms. Staff should not assume a landlord can immediately proceed after any fixed number of days — refer specific situations to legal assistance.'},
+      {accent:'teal', key:'Lease termination notice', text:'If a tenant needs to terminate a month-to-month lease, they must give the landlord 30 days\' written notice before vacating.'},
+      {accent:'amber', key:'Property upkeep', text:'Tenants are required to keep the property clean and avoid disturbing neighbors. Landlords may request a unit inspection if they believe a tenant is not maintaining habitable conditions.'},
+      {accent:'red', key:'Abandoned property', text:'If a tenant leaves personal property behind, the landlord must follow D.C.\'s statutory procedures before disposing of or selling any items. These requirements are detailed and have been subject to legislative change — staff should consult current D.C. Code or legal counsel before advising on this issue.'}
+    ]
+  },
+  {
+    type:'learn', label:'Section 5 of 5', title:'Rental Applications & Eviction in D.C.',
+    cards:[
+      {accent:'blue', key:'Criminal history rules', text:'D.C. landlords may not consider arrests that did not result in conviction. They must make a rental offer before considering any pending accusation or conviction from the last 7 years, and only for listed offense types.'},
+      {accent:'teal', key:'Withdrawing an offer', text:'To withdraw a rental offer based on a criminal record, a landlord must provide in writing a "substantial, legitimate, nondiscriminatory interest" considering several factors. Enforcement is available through the D.C. Office of Human Rights.'},
+      {accent:'amber', key:'Eviction timeline', text:'Eviction in Washington D.C. is generally a lengthy process. Timelines vary significantly depending on the basis for eviction and court backlog, but cases commonly take several months to over a year to resolve. D.C.\'s process is among the more tenant-protective in the country.'},
+      {accent:'red', key:'No self-help eviction', text:'Landlords may not change locks, remove belongings, or cut off utilities to force a tenant out. All evictions must go through the D.C. court system.'}
+    ]
+  },
+  {
+    type:'quiz',
+    questions:[
+      {q:'What is the maximum security deposit a landlord in Washington D.C. can charge?', opts:['1.5 times one month\'s rent','Two months\' rent','One month\'s rent','There is no limit'], correct:2, feedbackRight:'Correct! D.C. caps security deposits at one month\'s rent — stricter than many other jurisdictions.', feedbackWrong:'Not quite. D.C. limits security deposits to one month\'s rent only.'},
+      {q:'How long does a D.C. landlord have to return a security deposit after move-out?', opts:['14 days','30 days','45 days','60 days'], correct:2, feedbackRight:'Correct! Washington D.C. gives landlords 45 days to return security deposits after a tenant moves out.', feedbackWrong:'Not quite. D.C. landlords have 45 days to return the security deposit.'},
+      {q:'How much notice must a D.C. landlord give before entering a rental unit for a non-emergency?', opts:['12 hours','24 hours','48 hours','72 hours'], correct:2, feedbackRight:'Correct! D.C. requires 48 hours\' advance notice — more than most states.', feedbackWrong:'Not quite. D.C. requires a 48-hour notice before a landlord can enter for non-emergency purposes.'},
+      {q:'Which best describes how D.C. rent control works?', opts:['All D.C. rental units are subject to rent control with no exceptions','Many but not all D.C. units are covered — allowable increases are tied to inflation with specific limits and exemptions','Landlords may raise rent any amount as long as they give 30 days notice','D.C. has no rent control laws'], correct:1, feedbackRight:'Correct! Many but not all D.C. properties are subject to rent control. Allowable annual increases are tied to inflation and governed by D.C. law, with significant exemptions and special rules for certain tenants.', feedbackWrong:'Not quite. D.C. rent control applies to many but not all rental units. Increases are tied to inflation with specific limits — and numerous exemptions apply.'},
+      {q:'What should U.S.VETS staff know about D.C. eviction rules for nonpayment of rent?', opts:['Landlords can remove a tenant the day rent is late with no notice','D.C. has specific notice and filing requirements before a landlord may pursue eviction, and these rules have changed significantly in recent years','Tenants in D.C. can never be evicted for nonpayment','There is no legal process required — landlords may change locks immediately'], correct:1, feedbackRight:'Correct! D.C. has specific notice and filing requirements for nonpayment evictions, and these rules have evolved through legislative and COVID-era reforms. Staff should refer specific situations to legal assistance.', feedbackWrong:'Not quite. D.C. law includes specific and evolving notice requirements before a landlord may pursue eviction for nonpayment. Staff should refer veterans to legal assistance for guidance on specific situations.'},
+      {q:'Under D.C. law, when can a landlord consider a prospective tenant\'s criminal conviction history?', opts:['Before making any rental offer','Only after making a rental offer first','Never — criminal history cannot be considered at all','Any time during the application process'], correct:1, feedbackRight:'Correct! D.C. requires landlords to make a rental offer before considering any criminal conviction history from the past 7 years.', feedbackWrong:'Not quite. D.C. law requires landlords to make a rental offer first before considering criminal history.'},
+      {q:'How should staff think about D.C. eviction timelines?', opts:['Evictions are typically resolved in a week or two','Eviction timelines are fixed at exactly 30 days by D.C. law','Timelines vary significantly based on the basis for eviction and court backlog — cases commonly take several months to over a year','D.C. does not allow evictions'], correct:2, feedbackRight:'Correct! D.C. eviction timelines vary widely depending on the basis for eviction and court conditions. Cases commonly take several months to over a year, reflecting D.C.\'s strong tenant protections.', feedbackWrong:'Not quite. D.C. eviction timelines vary significantly — cases often take several months to over a year depending on the basis for eviction and court backlog.'}
+    ]
+  }
+];
+let current=0, answers=[], answered=[], score=0;
+function setProgress(idx){const t=slides.length,p=Math.round(((idx+1)/t)*100);document.getElementById('prog-fill').style.width=p+'%';document.getElementById('prog-count').textContent='Step '+(idx+1)+' of '+t;}
+function renderLearn(s,idx){const c=s.cards.map(c=>{const b=c.list?`<ul>${c.list.map(i=>`<li>${i}</li>`).join('')}</ul>`:`<p>${c.text}</p>`;return`<div class="card ${c.accent}"><div class="card-label">${c.key}</div>${b}</div>`;}).join('');const ib=idx===slides.length-2;return`<div class="section-eyebrow">${s.label}</div><div class="section-title">${s.title}</div>${c}<div class="nav-row"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><span class="step-indicator">${idx+1} / ${slides.length}</span><button class="btn primary" onclick="go(${idx+1})">${ib?'Take the Quiz →':'Next →'}</button></div>`;}
+function renderQuiz(s,idx){const qc=s.questions.length,dc=answered.filter(a=>a!==undefined).length,ad=dc===qc;let h=`<div class="section-eyebrow">Section 6 of 6</div><div class="section-title">Knowledge Check</div>`;s.questions.forEach((q,qi)=>{const ia=answered[qi]!==undefined,sel=answers[qi];const oh=q.opts.map((o,oi)=>{let c='quiz-opt';if(ia&&oi===q.correct)c+=' correct';else if(ia&&oi===sel&&oi!==q.correct)c+=' wrong';return`<button class="${c}" onclick="answer(${qi},${oi})" ${ia?'disabled':''}>${o}</button>`;}).join('');const fh=ia?`<div class="feedback ${sel===q.correct?'correct':'wrong'}">${sel===q.correct?'✓ '+q.feedbackRight:'✗ '+q.feedbackWrong}</div>`:'';h+=`<div class="quiz-q-card"><div class="q-number">Question ${qi+1} of ${qc}</div><div class="q-text">${q.q}</div>${oh}${fh}</div>`;});h+=`<div class="nav-row"><button class="btn" onclick="go(${idx-1})">← Back to review</button><span class="step-indicator">${dc} of ${qc} answered</span><button class="btn primary" onclick="showResults()" ${ad?'':'disabled'}>See my results →</button></div>`;return h;}
+function renderResults(){const t=slides[slides.length-1].questions.length,p=Math.round((score/t)*100),c=2*Math.PI*48,d=(p/100)*c,rc=p>=80?'#0F6E56':p>=60?'#BA7517':'#A32D2D',hl=p>=80?'Well done!':p>=60?'Good effort!':'Keep studying!',sub=p>=80?'You have a solid grasp of D.C. landlord-tenant law.':p>=60?'Review the sections where you missed questions, then retake the quiz.':'Go back through the training slides before retaking the quiz.';document.getElementById('prog-fill').style.width='100%';document.getElementById('prog-count').textContent='Complete';return`<div class="results-wrap">${p===100?'<div class="completion-banner"><span class="star">⭐</span><div><strong>Perfect score!</strong><p>You answered every question correctly.</p></div></div>':''}<div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${rc}" stroke-width="9" stroke-dasharray="${d.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round"/></svg><div class="score-num">${p}%</div></div><div class="result-headline">${hl}</div><div class="result-sub">${sub}</div><div class="result-tally">You got <strong>${score} of ${t}</strong> questions correct</div><div class="divider"></div><div class="topics-row"><span class="topic-badge a">Security Deposits</span><span class="topic-badge b">Rent Control</span><span class="topic-badge c">Landlord Entry</span><span class="topic-badge d">Eviction Process</span></div><div class="result-nav"><button class="btn" onclick="restartFull()">← Restart full training</button><button class="btn primary" onclick="retakeQuiz()">Retake quiz</button></div></div>`;}
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){setProgress(current);const s=slides[current];document.getElementById('content').innerHTML=s.type==='learn'?renderLearn(s,current):renderQuiz(s,current);window.scrollTo({top:0,behavior:'smooth'});}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maryland Landlord-Tenant Law | U.S.VETS Staff Training</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1D285A; --gold: #F7E100;
+    --blue: #185FA5; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+    --red: #A32D2D; --red-light: #FCEBEB; --red-dark: #501313;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4;
+    --text: #1a1a18; --text-muted: #5a5a56;
+    --radius: 10px; --radius-sm: 6px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
+  header { background: var(--navy); border-bottom: 4px solid var(--gold); }
+  .header-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .org-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; white-space: nowrap; }
+  .header-text h1 { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .header-text p { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 2px; }
+  .main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+  .progress-wrap { margin-bottom: 2rem; }
+  .progress-meta { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .progress-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-count { font-size: 12px; color: var(--text-muted); }
+  .progress-bar { height: 5px; background: var(--gray-200); border-radius: 99px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 99px; transition: width 0.35s ease; }
+  .card { background: #fff; border-radius: var(--radius); box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); overflow: hidden; }
+  .card-header { padding: 1.5rem 2rem 1.25rem; border-bottom: 1px solid var(--gray-200); }
+  .slide-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+  .slide-title { font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+  .card-body { padding: 1.75rem 2rem; }
+  .intro-text { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.65; }
+  .section-block { margin-bottom: 1.5rem; }
+  .section-block:last-child { margin-bottom: 0; }
+  .section-heading { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .callout { border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+  .callout-body { flex: 1; }
+  .callout-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .callout-text { font-size: 14px; line-height: 1.55; }
+  .callout.blue { background: var(--blue-light); } .callout.blue .callout-title { color: var(--blue-dark); } .callout.blue .callout-text { color: #1a3a5e; }
+  .callout.teal { background: var(--teal-light); } .callout.teal .callout-title { color: var(--teal-dark); } .callout.teal .callout-text { color: #0a3326; }
+  .callout.amber { background: var(--amber-light); } .callout.amber .callout-title { color: var(--amber-dark); } .callout.amber .callout-text { color: #4a2e00; }
+  .callout.red { background: var(--red-light); } .callout.red .callout-title { color: var(--red-dark); } .callout.red .callout-text { color: #3d1010; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .detail-item { background: var(--gray-100); border-radius: var(--radius-sm); padding: 12px 14px; }
+  .detail-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+  .detail-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .detail-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .list-items { list-style: none; }
+  .list-items li { font-size: 14px; padding: 7px 0; border-bottom: 1px solid var(--gray-200); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+  .list-items li:last-child { border-bottom: none; }
+  .list-items li::before { content: '•'; color: var(--navy); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .card-nav { padding: 1.25rem 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: center; }
+  .btn { font-size: 14px; font-weight: 500; padding: 9px 20px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200); background: #fff; color: var(--text); cursor: pointer; transition: all 0.15s; }
+  .btn:hover { border-color: var(--navy); color: var(--navy); }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn.primary:hover { background: #16204a; }
+  .btn:disabled { opacity: 0.4; cursor: default; }
+  .divider { height: 1px; background: var(--gray-200); margin: 1.25rem 0; }
+  .question-text { font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 1.25rem; }
+  .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.25rem; }
+  .option { border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 13px 16px; font-size: 14px; cursor: pointer; transition: all 0.15s; background: #fff; text-align: left; width: 100%; display: flex; align-items: center; gap: 12px; }
+  .option:hover:not(:disabled) { border-color: var(--navy); background: #f0f3fa; }
+  .option .opt-letter { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; color: var(--text-muted); }
+  .option.correct { border-color: var(--teal); background: var(--teal-light); } .option.correct .opt-letter { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .option.wrong { border-color: var(--red); background: var(--red-light); } .option.wrong .opt-letter { background: var(--red); border-color: var(--red); color: #fff; }
+  .feedback { border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.55; margin-bottom: 1rem; }
+  .feedback.correct { background: var(--teal-light); color: var(--teal-dark); border-left: 3px solid var(--teal); }
+  .feedback.wrong { background: var(--red-light); color: var(--red-dark); border-left: 3px solid var(--red); }
+  .quiz-progress { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .results-wrap { padding: 2rem; text-align: center; }
+  .score-ring-wrap { position: relative; display: inline-block; margin: 1rem auto; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 22px; font-weight: 700; color: var(--navy); }
+  .result-headline { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .result-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .result-tally { font-size: 14px; color: var(--text-muted); }
+  .topics-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 1rem 0; }
+  .topic-badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+  .topic-badge.a { background: var(--blue-light); color: var(--blue-dark); }
+  .topic-badge.b { background: var(--teal-light); color: var(--teal-dark); }
+  .topic-badge.c { background: var(--amber-light); color: var(--amber-dark); }
+  .topic-badge.d { background: var(--red-light); color: var(--red-dark); }
+  .result-nav { display: flex; gap: 10px; justify-content: center; margin-top: 1.25rem; }
+  @media (max-width: 600px) {
+    .header-inner { padding: 1.25rem; } .main { padding: 1.25rem 1rem 3rem; }
+    .card-header, .card-body, .card-nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .detail-grid { grid-template-columns: 1fr; } .results-wrap { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="org-badge">U.S.VETS</div>
+    <div class="header-text">
+      <h1>Maryland Landlord-Tenant Law</h1>
+      <p>Staff Training Module &mdash; Property & Housing Programs</p>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Progress</span>
+      <span class="progress-count" id="prog-count">Slide 1 of 6</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:16.7%"></div></div>
+  </div>
+  <div class="card" id="content"></div>
+</div>
+<script>
+const slides = [
+  {
+    type: 'learn', label: 'Overview', title: 'Maryland Landlord-Tenant Law: The Basics',
+    intro: 'Maryland landlord-tenant law consists of regulations created by state and local governments to safeguard the rights of both landlords and tenants. U.S.VETS housing staff need to understand these rules to protect the veterans we serve and work effectively with partner landlords across Maryland.',
+    sections: [
+      {
+        heading: 'Key Facts at a Glance', type: 'grid',
+        items: [
+          { label: 'Security Deposit Cap', value: '1 month\'s rent', sub: 'Recent change — was 2 months' },
+          { label: 'Deposit Return Deadline', value: '45 days', sub: 'After tenant vacates' },
+          { label: 'Deposit Interest', value: 'Per current state law', sub: 'Rate subject to change' },
+          { label: 'Written Lease', value: 'Required 1+ yr terms', sub: 'Strongly recommended always' },
+          { label: 'Entry Notice Required', value: 'Reasonable notice', sub: 'Not defined by statute' },
+          { label: 'Tenancy Termination', value: 'Per statute & notice', sub: 'Depends on tenancy type' }
+        ]
+      },
+      {
+        heading: 'Why This Matters for U.S.VETS', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '🏠', title: 'Housing program staff', text: 'Need to know Maryland\'s strict deposit rules — including the 1-month cap — to help veterans recover deposits and dispute unlawful deductions.' },
+          { type: 'teal', icon: '⚖️', title: 'Case managers', text: 'Should understand that Maryland permits certain tenancy terminations without proof of tenant misconduct, provided statutory notice and court procedures are followed. Timelines and rules vary by tenancy type and local law.' },
+          { type: 'amber', icon: '📋', title: 'Property liaisons', text: 'Must ensure partner landlords are following Maryland\'s deposit banking requirements, proper notice procedures, and all applicable local ordinances.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Lease Agreements', title: 'Maryland Lease Agreements',
+    intro: 'Maryland recognizes both written and oral rental agreements. Written leases are generally required for lease terms exceeding one year and are strongly recommended for all tenancies to prevent disputes and ensure clarity.',
+    sections: [
+      {
+        heading: 'Lease Types', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '📄', title: 'Fixed-term lease', text: 'Has a specific start and end date, often one year. Both parties are bound to the terms. At expiration, the lease may be renewed, converted to month-to-month, or terminated per the terms and applicable law.' },
+          { type: 'teal', icon: '🔄', title: 'Month-to-month lease', text: 'Renews automatically each month until either party gives proper notice. In most month-to-month residential tenancies, landlords generally must provide 60 days\' notice to terminate. Tenants typically need only 30 days\' notice.' },
+          { type: 'amber', icon: '⚠️', title: 'Oral agreements', text: 'Maryland recognizes oral rental agreements, particularly for shorter-term tenancies. However, oral agreements are difficult to enforce. Written leases are strongly recommended in all circumstances.' }
+        ]
+      },
+      {
+        heading: 'Required Lease Contents', type: 'list',
+        items: [
+          'Names and addresses of all parties',
+          'Property address and description of the premises',
+          'Lease term (start and end dates)',
+          'Monthly rent amount and due date',
+          'Security deposit amount and conditions for return',
+          'Late fee policies (if any)',
+          'Pet policy and utility responsibilities',
+          'Any rules or restrictions specific to the property'
+        ]
+      },
+      {
+        heading: 'Important Maryland-Specific Lease Rules', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'No waiving tenant rights', text: 'Lease provisions that attempt to waive a tenant\'s legal rights under Maryland law are unenforceable — even if the tenant signed the lease.' },
+          { type: 'blue', icon: '📋', title: 'Tenant screening', text: 'Landlords who use tenant screening reports should comply with applicable federal and state consumer reporting requirements. Specific disclosure obligations depend on whether adverse action is taken and which reports are used.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Security Deposits', title: 'Security Deposits in Maryland',
+    intro: 'Maryland has some of the most specific security deposit rules in the country. A recent change reduced the maximum deposit from two months\' rent to one month\'s rent. Landlords who fail to follow these rules face significant penalties.',
+    sections: [
+      {
+        heading: 'Deposit Rules at a Glance', type: 'grid',
+        items: [
+          { label: 'Maximum Amount', value: '1 month\'s rent', sub: 'Changed from prior 2-month cap' },
+          { label: 'Return Deadline', value: '45 days', sub: 'After tenant vacates' },
+          { label: 'Interest Required', value: 'Yes', sub: 'Per current Maryland law' },
+          { label: 'Banking Requirement', value: 'Per state statute', sub: 'Federally insured institution' }
+        ]
+      },
+      {
+        heading: 'Allowable Deductions', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '💰', title: 'Unpaid rent', text: 'Any rent owed at the time the tenant moves out may be deducted.' },
+          { type: 'amber', icon: '🔨', title: 'Damage beyond normal wear and tear', text: 'Landlords may deduct for damage exceeding ordinary use — not for fading paint, minor scuffs, or carpet worn through normal occupancy.' },
+          { type: 'teal', icon: '🧹', title: 'Cleaning costs and lease breach costs', text: 'Deductions may be made for cleaning or costs arising from other breaches of lease terms, if documented and itemized.' }
+        ]
+      },
+      {
+        heading: 'Banking and Interest Requirements', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '🏦', title: 'Where deposits must be held', text: 'Security deposits must be maintained in accordance with Maryland\'s statutory banking requirements, which require use of a federally insured financial institution.' },
+          { type: 'teal', icon: '📈', title: 'Interest accrual', text: 'Maryland requires qualifying security deposits to accrue interest in accordance with current state law. The applicable rate is subject to change — landlords should verify the current requirement.' }
+        ]
+      },
+      {
+        heading: 'Landlord Penalties for Non-Compliance', type: 'callouts',
+        items: [
+          { type: 'red', icon: '⚖️', title: 'Failure to return deposit', text: 'If a landlord fails to return the deposit or provide an itemized deduction list within 45 days, failure to comply may significantly limit a landlord\'s ability to retain or deduct from the deposit and may expose the landlord to statutory penalties including damages and attorney fees.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Landlord Obligations', title: 'Landlord Obligations & Tenant Rights',
+    intro: 'Maryland law places real duties on landlords to maintain safe, habitable properties. Tenants have enforceable rights when those duties are not met — and landlords cannot retaliate against tenants who assert them.',
+    sections: [
+      {
+        heading: 'Habitability Requirements', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '🏗️', title: 'Fit and habitable condition', text: 'Landlords must maintain rental units in a condition that is safe and fit for human habitation, including functioning heat, plumbing, electrical systems, and structural integrity.' },
+          { type: 'blue', icon: '🔧', title: 'Repair obligations', text: 'Landlords must make repairs in a reasonable time after receiving notice from a tenant. For urgent habitability issues, courts generally expect prompt action. Tenants should always submit repair requests in writing.' },
+          { type: 'amber', icon: '📝', title: 'Written repair requests', text: 'Tenants should document repair requests in writing. This creates a legal record that triggers the landlord\'s duty and is essential if the matter proceeds to court.' }
+        ]
+      },
+      {
+        heading: 'Tenant Remedies for Unaddressed Repairs', type: 'list',
+        items: [
+          'File a complaint with local housing authorities or code enforcement',
+          'Withhold rent (in limited circumstances, and only through proper legal channels)',
+          'Pursue a rent escrow action in District Court',
+          'In some circumstances, serious habitability violations may allow a tenant to terminate the tenancy after following appropriate legal procedures'
+        ]
+      },
+      {
+        heading: 'Fair Housing', type: 'callouts',
+        items: [
+          { type: 'teal', icon: '⚖️', title: 'State and federal protections apply', text: 'Maryland enforces both federal Fair Housing Act protections and state-level protections. Discrimination based on race, color, religion, sex, national origin, familial status, disability, marital status, or source of income is prohibited.' },
+          { type: 'red', icon: '💸', title: 'Penalties for violations', text: 'Fair housing violations can result in fines of tens of thousands of dollars plus civil lawsuits from aggrieved tenants. Any accused landlord should immediately consult legal counsel and document all relevant communications.' }
+        ]
+      },
+      {
+        heading: 'Retaliation Protections', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'Retaliation is prohibited', text: 'Landlords cannot raise rent, cut services, or threaten eviction because a tenant filed a complaint, requested repairs, or contacted a housing authority. Retaliation is a separate legal violation in Maryland.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'learn', label: 'Eviction Process', title: 'Eviction Law in Maryland',
+    intro: 'Maryland permits certain tenancy terminations that do not require proof of tenant misconduct, provided statutory notice and court procedures are followed. However, eviction authority depends on the type of tenancy, lease status, applicable notice requirements, and local laws. The process must always go through the courts.',
+    sections: [
+      {
+        heading: 'Common Grounds for Eviction', type: 'list',
+        items: [
+          'Non-payment of rent',
+          'Violation of lease terms',
+          'Illegal activity on the premises',
+          'Health or safety violations',
+          'End of lease term (subject to tenancy type, notice requirements, and local law)'
+        ]
+      },
+      {
+        heading: 'The Eviction Timeline', type: 'callouts',
+        items: [
+          { type: 'blue', icon: '1️⃣', title: 'Step 1: Written Notice', text: 'The landlord must give written notice before filing. For non-payment of rent, this is typically a pay-or-quit notice. Notice length for other reasons depends on the tenancy type, lease terms, and local law.' },
+          { type: 'amber', icon: '2️⃣', title: 'Step 2: Filing in District Court', text: 'The landlord files for eviction in Maryland District Court. The court sets a hearing date. Landlords should document all lease violations, notices, and communications thoroughly to support their case.' },
+          { type: 'teal', icon: '3️⃣', title: 'Step 3: Court Hearing', text: 'Both landlord and tenant present their case. If the landlord prevails, the court issues a judgment. The tenant typically has a short window to appeal or comply.' },
+          { type: 'red', icon: '4️⃣', title: 'Step 4: Warrant of Restitution', text: 'If the tenant does not vacate, the landlord requests a Warrant of Restitution. A sheriff or constable enforces removal — this is the only lawful means of physical removal.' }
+        ]
+      },
+      {
+        heading: 'Self-Help Evictions Are Illegal', type: 'callouts',
+        items: [
+          { type: 'red', icon: '🚫', title: 'No lock-outs or utility shutoffs', text: 'Landlords cannot change locks, remove doors, shut off utilities, or remove tenant belongings to force someone out. These actions are illegal in Maryland regardless of the circumstances.' }
+        ]
+      }
+    ]
+  },
+  {
+    type: 'quiz', label: 'Knowledge Check', title: 'Maryland Law: Knowledge Check',
+    questions: [
+      {
+        text: 'What is the current maximum security deposit a Maryland landlord may charge?',
+        options: ['Two months\' rent', 'One month\'s rent', 'One and a half months\' rent', 'There is no cap in Maryland'],
+        correct: 1,
+        feedback: 'Maryland recently reduced the security deposit cap from two months to one month\'s rent. This is an important update — staff should know this when helping veterans dispute overcharged deposits.'
+      },
+      {
+        text: 'How long does a Maryland landlord have to return a security deposit after a tenant moves out?',
+        options: ['14 days', '30 days', '45 days', '60 days'],
+        correct: 2,
+        feedback: 'Maryland landlords have 45 days to return the security deposit or provide an itemized list of deductions. Failure to comply may significantly limit a landlord\'s ability to retain the deposit and may expose them to statutory penalties including damages and attorney fees.'
+      },
+      {
+        text: 'Maryland law requires written leases for all residential tenancies.',
+        options: [
+          'True — all Maryland leases must be in writing',
+          'False — written leases are generally required only for terms exceeding one year; oral agreements are recognized in many circumstances',
+          'True — but only for landlords with more than 5 units',
+          'False — Maryland has no lease requirements at all'
+        ],
+        correct: 1,
+        feedback: 'False. Maryland recognizes oral rental agreements, particularly for shorter-term tenancies. Written leases are generally required for lease terms exceeding one year and are strongly recommended for all tenancies. Many valid Maryland tenancies may be oral.'
+      },
+      {
+        text: 'Which best describes Maryland\'s approach to ending a tenancy without proof of tenant misconduct?',
+        options: [
+          'Maryland is a strict just-cause eviction state — landlords must always prove tenant wrongdoing',
+          'Maryland permits certain tenancy terminations that do not require proof of tenant misconduct, provided statutory notice and court procedures are followed',
+          'Maryland has no eviction process — landlords may remove tenants whenever the lease ends',
+          'Maryland requires 90 days\' notice for all tenancy terminations'
+        ],
+        correct: 1,
+        feedback: 'Maryland permits certain tenancy terminations that do not require proof of tenant misconduct, provided statutory notice and court procedures are followed. However, the rules depend on tenancy type, lease status, applicable notice requirements, and local laws — it is not as simple as a blanket "no-fault" or "just-cause" categorization.'
+      },
+      {
+        text: 'A veteran reports their landlord shut off the electricity after they fell behind on rent. Is this legal in Maryland?',
+        options: [
+          'Yes — if rent is more than 30 days past due',
+          'Yes — if it is specified in the lease',
+          'No — this is an illegal self-help eviction tactic',
+          'No — only if the landlord also pays the utilities'
+        ],
+        correct: 2,
+        feedback: 'Shutting off utilities to force a tenant out is an illegal self-help eviction in Maryland. Landlords must use the formal court process. Staff should document this and help the veteran connect with legal aid immediately.'
+      },
+      {
+        text: 'Which of the following is an additional protected class under Maryland\'s fair housing law that is NOT covered by the federal Fair Housing Act?',
+        options: ['Race', 'Religion', 'Source of income', 'National origin'],
+        correct: 2,
+        feedback: 'Maryland\'s state fair housing law extends protections to source of income — meaning landlords generally cannot refuse to rent to someone because they use a housing voucher or other assistance. Race, religion, and national origin are federally protected characteristics.'
+      },
+      {
+        text: 'In most Maryland month-to-month residential tenancies, how much notice must a landlord give to terminate the tenancy?',
+        options: ['14 days', '30 days', '45 days', '60 days'],
+        correct: 3,
+        feedback: 'In most month-to-month residential tenancies, Maryland landlords generally must provide 60 days\' notice to terminate. Tenants typically need only 30 days\' notice — an intentional asymmetry in state law. Note that exceptions may apply based on tenancy type and local law.'
+      }
+    ]
+  }
+];
+
+let current = 0, answers = [], answered = [], score = 0;
+
+function setProgress(idx) {
+  document.getElementById('prog-fill').style.width=((idx+1)/slides.length*100)+'%';
+  document.getElementById('prog-count').textContent=idx<slides.length-1?'Slide '+(idx+1)+' of '+(slides.length-1):'Knowledge Check';
+}
+
+function renderLearn(slide, idx) {
+  let sectionsHtml = '';
+  for (const sec of slide.sections) {
+    let inner = '';
+    if (sec.type==='grid') inner='<div class="detail-grid">'+sec.items.map(i=>`<div class="detail-item"><div class="detail-label">${i.label}</div><div class="detail-value">${i.value}</div>${i.sub?`<div class="detail-sub">${i.sub}</div>`:''}</div>`).join('')+'</div>';
+    else if (sec.type==='callouts') inner=sec.items.map(i=>`<div class="callout ${i.type}"><div class="callout-icon">${i.icon}</div><div class="callout-body"><div class="callout-title">${i.title}</div><div class="callout-text">${i.text}</div></div></div>`).join('');
+    else if (sec.type==='list') inner='<ul class="list-items">'+sec.items.map(i=>`<li>${i}</li>`).join('')+'</ul>';
+    sectionsHtml+=`<div class="section-block"><div class="section-heading">${sec.heading}</div>${inner}</div>`;
+  }
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${slide.intro?`<p class="intro-text">${slide.intro}</p>`:''}${sectionsHtml}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})" ${idx===0?'disabled':''}>← Back</button><button class="btn primary" onclick="go(${idx+1})">${idx===slides.length-2?'Take the Quiz →':'Next →'}</button></div>`;
+}
+
+function renderQuiz(slide, idx) {
+  const allAnswered=slide.questions.every((_,qi)=>answered[qi]!==undefined);
+  let qHtml=slide.questions.map((q,qi)=>{
+    const ua=answered[qi];
+    const opts=q.options.map((opt,oi)=>{
+      let cls='option';
+      if(ua!==undefined){if(oi===q.correct)cls+=' correct';else if(oi===ua)cls+=' wrong';}
+      return `<button class="${cls}" onclick="answer(${qi},${oi})" ${ua!==undefined?'disabled':''}><span class="opt-letter">${['A','B','C','D'][oi]}</span><span>${opt}</span></button>`;
+    }).join('');
+    const fb=ua!==undefined?`<div class="feedback ${ua===q.correct?'correct':'wrong'}">${ua===q.correct?'✅ ':'❌ '}${q.feedback}</div>`:'';
+    return `<div style="margin-bottom:2rem;padding-bottom:${qi<slide.questions.length-1?'2rem':'0'};border-bottom:${qi<slide.questions.length-1?'1px solid var(--gray-200)':'none'}"><div class="quiz-progress">Question ${qi+1} of ${slide.questions.length}</div><div class="question-text">${q.text}</div><div class="options">${opts}</div>${fb}</div>`;
+  }).join('');
+  return `<div class="card-header"><div class="slide-label">${slide.label}</div><div class="slide-title">${slide.title}</div></div>
+    <div class="card-body">${qHtml}${allAnswered?`<div style="text-align:center;margin-top:1rem"><button class="btn primary" onclick="showResults()">See My Results →</button></div>`:''}</div>
+    <div class="card-nav"><button class="btn" onclick="go(${idx-1})">← Back to Training</button><span style="font-size:13px;color:var(--text-muted)">${Object.keys(answered).length} of ${slide.questions.length} answered</span></div>`;
+}
+
+function renderResults() {
+  const total=slides[slides.length-1].questions.length,pct=Math.round((score/total)*100);
+  const c=2*Math.PI*48,dash=(pct/100)*c;
+  const ringColor=pct>=80?'#0F6E56':pct>=60?'#BA7517':'#A32D2D';
+  const headline=pct>=80?'Well done!':pct>=60?'Good effort!':'Keep studying!';
+  const sub=pct>=80?'You have a solid grasp of Maryland landlord-tenant law.':pct>=60?'Review the sections where you missed questions, then retake.':'Go back through the training slides before retaking.';
+  document.getElementById('prog-fill').style.width='100%';
+  document.getElementById('prog-count').textContent='Complete';
+  return `<div class="results-wrap"><div class="slide-label" style="text-align:center;margin-bottom:0.5rem">Quiz Complete</div>
+    <div class="score-ring-wrap"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="48" fill="none" stroke="#E8E8E4" stroke-width="9"/><circle cx="55" cy="55" r="48" fill="none" stroke="${ringColor}" stroke-width="9" stroke-dasharray="${dash.toFixed(1)} ${c.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 55 55)"/></svg><div class="score-num">${pct}%</div></div>
+    <div class="result-headline">${headline}</div><div class="result-sub">${sub}</div>
+    <div class="result-tally">You got <strong>${score} of ${total}</strong> questions correct</div>
+    <div class="divider"></div>
+    <div class="topics-row"><span class="topic-badge a">Lease Agreements</span><span class="topic-badge b">Security Deposits</span><span class="topic-badge c">Landlord Obligations</span><span class="topic-badge d">Eviction Process</span></div>
+    <div class="result-nav"><button class="btn" onclick="restartFull()">← Restart Full Training</button><button class="btn primary" onclick="retakeQuiz()">Retake Quiz</button></div></div>`;
+}
+
+function answer(qi,oi){if(answered[qi]!==undefined)return;answers[qi]=oi;answered[qi]=oi;if(oi===slides[slides.length-1].questions[qi].correct)score++;render();}
+function showResults(){document.getElementById('content').innerHTML=renderResults();}
+function retakeQuiz(){answers=[];answered=[];score=0;current=slides.length-1;render();}
+function restartFull(){answers=[];answered=[];score=0;current=0;render();}
+function go(n){if(n<0||n>=slides.length)return;current=n;render();}
+function render(){
+  setProgress(current);
+  const slide=slides[current];
+  document.getElementById('content').innerHTML=slide.type==='learn'?renderLearn(slide,current):renderQuiz(slide,current);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+render();
+</script>
+</body>
+</html>
